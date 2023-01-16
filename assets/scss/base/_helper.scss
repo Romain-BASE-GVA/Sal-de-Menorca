@@ -1,0 +1,35 @@
+.wrapper {
+    width: 100%;
+    padding-left: $space-xl;
+    padding-right: $space-xl;
+
+    @media (max-width: $md){
+        padding-left: $space-lg;
+        padding-right: $space-lg;
+    }
+
+    @media (max-width: $sm){
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.clean-list {
+    @include clean-list;
+}

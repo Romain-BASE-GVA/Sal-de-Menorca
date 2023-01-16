@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Salinas';
+    src: url('../fonts/salinas-regular.eot');
+    src: url('../fonts/salinas-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/salinas-regular.woff2') format('woff2'),
+        url('../fonts/salinas-regular.woff') format('woff'),
+        url('../fonts/salinas-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sohne';
+    src: url('../fonts/sohne.eot');
+    src: url('../fonts/sohne.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/sohne.woff2') format('woff2'),
+        url('../fonts/sohne.woff') format('woff'),
+        url('../fonts/sohne.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-brand;
+    font-size: 2rem;
+    line-height: 1.34;
+    background-color: $white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+p {
+
+
+    &:first-child,
+    &:only-child {
+        margin-top: 0
+    }
+
+    &:last-child,
+    &:only-child {
+        margin-bottom: 0
+    }
+}
+
+

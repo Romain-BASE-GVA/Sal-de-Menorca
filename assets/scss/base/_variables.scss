@@ -1,0 +1,31 @@
+$gutter: 4rem;
+
+$sm : 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1350px;
+$xxl: 1700px;
+
+$font-brand: 'Salinas';
+$font-text: 'Sohne';
+
+$black: #000;
+$white: #FFF;
+// $light-grey: #F6F6F6;
+// $mid-grey: #cfcfcf;
+// $dark-grey: #585858;
+$blue: #000064;
+
+$primary: $blue;
+
+$space-xxs: $gutter/2;
+$space-xs: $gutter/3*2;
+$space-sm: $gutter;
+$space-md: $gutter/2*3;
+$space-lg: $gutter * 2;
+$space-xl: $gutter/2*5;
+$space-2xl: $gutter*3;
+$space-3xl: $gutter*5;
+$space-4xl: $gutter*6;
+
+$radius: 3rem;

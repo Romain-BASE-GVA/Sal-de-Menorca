@@ -1,0 +1,19 @@
+.article {
+    color: $primary;
+}
+
+.article__block {
+    margin-top: $gutter*2;
+    margin-bottom: $gutter*2;
+    padding-right: $gutter;
+    padding-left: $gutter;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    @media (max-width: $sm){
+        padding-right: $gutter/2;
+        padding-left: $gutter/2;
+    }
+}

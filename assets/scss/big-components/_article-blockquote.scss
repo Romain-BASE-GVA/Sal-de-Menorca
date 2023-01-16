@@ -1,0 +1,27 @@
+.article-blockquote {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: $gutter;
+    @include fs-xxl-clamp;
+    line-height: 1;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.article-blockquote blockquote {
+    text-align: center;
+    grid-column: 2/12;
+    margin: 0;
+
+    @media (max-width: $xl){
+        grid-column: 1/13;
+    }
+}
+
+.article-blockquote p {
+
+}
+
+.article-blockquote span {
+    display: inline-block;
+}

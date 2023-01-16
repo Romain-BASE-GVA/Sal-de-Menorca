@@ -1,0 +1,28 @@
+.block--text {
+    grid-column: 3 / 11;
+    @include fs-xxl-clamp;
+    line-height: 1;
+    text-align: center;
+    color: $primary;
+    padding: 3em 0;
+
+    &--big {
+        @include fs-xxxl-clamp;
+    }
+
+    // &--cap {
+    //     text-transform: uppercase;
+    // }
+
+    @media (max-width: $xl){
+        grid-column: 2 / 12;
+    }
+
+    @media (max-width: $sm){
+        grid-column: 1 / 13;
+    }
+}
+
+.block--text span {
+    display: inline-block;
+}

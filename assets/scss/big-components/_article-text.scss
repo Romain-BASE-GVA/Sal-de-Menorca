@@ -1,0 +1,39 @@
+.article-text {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: $gutter;
+    @include fs-lg;
+
+    >div {
+        grid-column: 5/9;
+    }
+
+    p {
+        font-family: $font-text;
+        
+        line-height: 1.25
+    }
+
+    @media (max-width: $xxl){
+        > div {
+            grid-column: 4/10;
+        }
+    }
+
+    @media (max-width: $xl){
+        @include fs-md;
+        > div {
+            grid-column: 3/11;
+        }
+    }
+
+    @media (max-width: $md){
+        @include fs-sm;
+    }
+
+    @media (max-width: $sm){
+        > div {
+            grid-column: 2/12;
+        }
+    }
+}

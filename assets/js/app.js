@@ -1,0 +1,531 @@
+$(document).ready(function () {
+    console.log('READY TO RUMBLE');
+
+    var productNavIsOpen = false;
+
+    productNav();
+    homeHeader();
+    topbarColorRotation();
+    splitTextAnim();
+    divided();
+    fullImgMelt();
+    articlePage();
+    blockFeatured();
+    blog();
+    singleProduct();
+    footerScroll();
+
+    function productNav() {
+
+        $('.product-nav-trigger').on('click', function (e) {
+            e.preventDefault();
+
+            if (!productNavIsOpen) {
+                $('.product-nav').addClass('product-nav--is-open');
+                $('.topbar').addClass('topbar--product-open');
+                productNavIsOpen = true;
+            } else {
+                $('.product-nav').removeClass('product-nav--is-open');
+                $('.topbar').removeClass('topbar--product-open');
+                productNavIsOpen = false;
+            }
+        });
+
+        $('.blur-all').on('click', function () {
+            if (productNavIsOpen) {
+                $('.product-nav').removeClass('product-nav--is-open');
+                $('.topbar').removeClass('topbar--product-open');
+                productNavIsOpen = false;
+            }
+        });
+
+        $('.product-nav__item').each(function () {
+            var thisImgs = $(this).find('.product-nav__imgs'),
+                thisImgWrapper = thisImgs.find('.product-nav__imgs-wrapper'),
+                thisTitle = $(this).find('.product-nav__title'),
+                thisMainTitle = $(this).find('.product-nav__title__main'),
+                thisSubTitle = $(this).find('.product-nav__title__sub');
+
+            gsap.to(thisImgWrapper, {
+                scrollTrigger: {
+                    scroller: '.product-nav__wrapper',
+                    trigger: thisImgs,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    // markers: true,
+                    scrub: 1
+                },
+                y: '100'
+            });
+
+            gsap.from(thisImgWrapper, {
+                scrollTrigger: {
+                    scroller: '.product-nav__wrapper',
+                    trigger: thisImgs,
+                    start: 'top bottom',
+                    end: 'center bottom',
+                    // markers: true,
+                    scrub: 1
+                },
+                autoAlpha: 0
+            });
+
+            let productTitle = gsap.timeline({
+                scrollTrigger: {
+                    scroller: '.product-nav__wrapper',
+                    trigger: thisTitle,
+                    start: 'center bottom',
+                    onLeaveBack() {
+                        productTitle.reverse(2);
+                    },
+                }
+            });
+
+            productTitle.from(thisMainTitle, { autoAlpha: 0, yPercent: 25, rotate: 1.5 })
+                .from(thisSubTitle, { autoAlpha: 0, yPercent: 25, rotate: 1.5, delay: -.25 });
+
+        });
+
+    };
+
+    function homeHeader() {
+
+        var switchLogos = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.header__logo',
+                start: 'top 25%',
+                end: 'bottom center',
+                scrub: 1
+            }
+        });
+
+        if ($('.header--home video').length) {
+
+            ScrollTrigger.create({
+                trigger: '.header--home',
+                start: 'bottom top',
+                end: 10000000,
+                onEnter: self => {
+                    $('.header--home video')[0].pause();
+                },
+                onLeaveBack: self => {
+                    $('.header--home video')[0].play();
+                }
+            });
+
+        };
+
+        gsap.to('.header--home__media', {
+            scrollTrigger: {
+                trigger: '.header--home',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true
+            },
+            yPercent: 15
+        });
+
+        switchLogos
+            .to('.header__logo__de', { autoAlpha: 0 }, "de")
+            .to('.header__logo__sal', { autoAlpha: 0 }, "de+=.1")
+            .to('.header__logo__menorca', { autoAlpha: 0 }, "de+=.2");
+
+    };
+
+    function topbarColorRotation() {
+
+        gsap.set('.topbar__sigle__s', { 'transformOrigin': 'center' });
+
+        let rotateSScroll = ScrollTrigger.create({
+            trigger: 'body',
+            start: 'top top',
+            end: 'bottom bottom',
+            // markers: true,
+            refreshPriority: -2000,
+            onUpdate: self => {
+                // gsap.to('.topbar__sigle__s', { rotate: - self.progress * 1000 });
+                gsap.to('.topbar__sigle__s', { rotate: - self.scroll() / 25 });
+            }
+        });
+
+        // gsap.to('.topbar__sigle__s', { rotate: - rotateSScroll.scroll() });
+        
+
+
+        $('[data-topbar-class]').each(function (e) {
+
+            var thisTopbarClass = $(this).data('topbar-class');
+
+            var next = $(this).next('[data-topbar-class]');
+            var previous = $(this).prev('[data-topbar-class]');
+            var previousTopbarClass = previous.data('topbar-class');
+
+            ScrollTrigger.create({
+                trigger: $(this),
+                start: 'top 40px',
+                endTrigger: next,
+                end: 'bottom 40px',
+                invalidateOnRefresh: true,
+                refreshPriority: -1000,
+                //markers: true,
+                onEnter: () => {
+                    console.log('ENTER');
+                    $('.topbar')
+                        .removeClass('topbar--light topbar--dark')
+                        .addClass(thisTopbarClass);
+                },
+                onEnterBack: () => {
+                    console.log('ENTER BACK');
+                },
+                onLeave: () => {
+                    console.log('ON LEAVE');
+                },
+                onLeaveBack: (e) => {
+                    console.log('ON LEAVE BACK');
+                    console.log($(e.trigger).prevAll().data('topbar-class'));
+
+                    $('.topbar')
+                        .removeClass('topbar--light topbar--dark')
+                        .addClass($(e.trigger).prevAll().data('topbar-class'));
+                }
+            });
+        });
+    };
+
+    function splitTextAnim() {
+
+        $('.block--text p, .article-blockquote p').each(function () {
+            var split = $(this).splitText({ type: 'words', useLite: true });
+            var words = $(this).find('span');
+            var parentIndex = $(this).parents('.section').index();
+
+            gsap.from(words, {
+                scrollTrigger: {
+                    trigger: $(this),
+                    start: 'bottom bottom',
+                    end: 'bottom center',
+                    scrub: 1,
+                    refreshPriority: - parentIndex
+                },
+                stagger: {
+                    each: 0.1,
+                },
+                autoAlpha: 0,
+                yPercent: 50
+            });
+        });
+
+    };
+
+    function divided() {
+        $(".divided").each(function () {
+            var $this = $(this);
+            var $thisSection = $this.parents(".section--divided");
+            var $thisSingleMedia = $(this).find(".divided__side--single-media");
+            var $thisItems = $this.find(".multiple__item");
+            var numOfItem = $thisItems.length;
+            var $thisMainImg = $this.find(".single-media img").length ? $this.find(".single-media img") : $this.find(".single-media video");
+            var parentIndex = $(this).parents('.section').index();
+
+            var curtainAnim = gsap.timeline({
+                scrollTrigger: {
+                    trigger: $this,
+                    pin: true,
+                    start: "top top", // when the top of the trigger hits the top of the viewport
+                    end: () => {
+                        return "+=" + window.innerHeight * numOfItem;
+                    },
+                    scrub: 1,
+                    refreshPriority: - parentIndex,
+                    // snap: 1 / (numOfItem - 1),
+                    snap: {
+                        snapTo: 1 / (numOfItem - 1), // progress increment
+                        // or "labels" or function or Array
+                        duration: 0.85,
+                        directional: true,
+                        ease: Expo.easeOut,
+                        delay: .01,
+
+                        // other callbacks: onStart, onInterrupt
+                    },
+                    // onEnter: function(){
+                    // 		if($this.find(".single-media video").length){
+                    // 			$this.find(".single-media video")[0].play();
+                    // 		}
+                    // 		console.log('ENTERRRRRRRRRR');
+                    // 	},
+                    // 	onLeave: function(){
+                    // 		if($this.find(".single-media video").length){
+                    // 			$this.find(".single-media video")[0].pause();
+                    // 		}
+                    // 	},
+                    //snap: "labelsDirectional"
+
+                }
+            });
+
+            if ($thisMainImg.length) {
+                gsap.from($thisMainImg, {
+                    scrollTrigger: {
+                        trigger: $thisSection,
+                        start: "top top",
+                        end: () => {
+                            return "+=" + window.innerHeight * numOfItem;
+                        },
+                        scrub: 1
+                    },
+                    scale: 1.2
+                });
+            }
+
+            gsap.from($thisSingleMedia, {
+                scrollTrigger: {
+                    trigger: $thisSection,
+                    start: "top bottom",
+                    end: "center center",
+                    scrub: 1
+                },
+                yPercent: 10
+            });
+
+            // curtainAnim .to($thisItems[0], {'--top': '0%', duration: 1})
+            // 						.to($thisItems[1], {'--top': '0%', duration: 1})
+
+            for (let i = 0; i < numOfItem - 1; i++) {
+                //console.log($thisItems.eq(i).find("img"));
+
+                curtainAnim
+                    .to($thisItems[i], { "--top-left": "0%", duration: 1 }, "item-" + i)
+                    .to($thisItems[i], { "--top-right": "0%", duration: 1 }, "item-" + i)
+                    .to(
+                        $thisItems.eq(i).find("img"),
+                        { opacity: 0.25, duration: 1 },
+                        "item-" + i
+                    )
+                    .from(
+                        $thisItems.eq(i + 1).find("img"),
+                        { scale: 1.1, "--blur": 10 + "px", opacity: 0.25, duration: 1 },
+                        "item-" + i
+                    )
+                    .from(
+                        $thisItems.eq(i + 1).find(".btn"),
+                        { opacity: 0, duration: 0.5, stagger: 0.1 },
+                        "item-" + i + "+=.5"
+                    );
+            }
+        });
+    };
+
+    function fullImgMelt() {
+
+        $('.block--full-image').each(function () {
+            var $this = $(this);
+            var parentIndex = $(this).parents('.section').index();
+
+            var fullImgMedia = gsap.timeline({
+                scrollTrigger: {
+                    trigger: $this,
+                    // trigger: '.section--full-image',
+                    pin: true,
+                    anticipatePin: 1,
+                    start: 'top top',
+                    end: () => {
+                        return '+=' + window.innerHeight;
+                        //return "+=" + window.innerHeight / 3;
+                    },
+                    scrub: .5,
+                    refreshPriority: - parentIndex
+                }
+            });
+
+            fullImgMedia.to('.full-image-media', { '--mask-dot-width-in': 0, '--mask-dot-width-out': '-5%', duration: 1 }, 'start')
+                .to('.full-image-media', { '--mask-dot-opacity': 0, duration: 1 }, 'start+=.75');
+
+        });
+
+    };
+
+    function articlePage() {
+
+        var articleIntro = gsap.timeline({ paused: true, delay: .5 });
+        var articleTitleSplit = $('.header__title').splitText({ type: 'words', useLite: true });
+        var words = articleTitleSplit.find('span');
+
+        articleIntro
+            .from(words, {
+                autoAlpha: 0, yPercent: 50, duration: 1, ease: Expo.easeInOut, stagger: {
+                    each: 0.05,
+                },
+            }, )
+            .from($('.article__block:first-child, .blog'), {autoAlpha: 0, y: '50px', duration: 1, ease: Expo.easeInOut}, '-=.8')
+            .from($('.header__cat'), {autoAlpha: 0, y: '50px', duration: 1, ease: Expo.easeInOut}, '-=1.1');
+
+        articleIntro.play();
+
+        // 
+        //     tl.to("#id", {x: 100, duration: 1});
+        //     tl.to("#id", {y: 50, duration: 1});
+        //     tl.to("#id", {opacity: 0, duration: 1});
+
+
+        $('.article-media--full .article-media__frame').each(function () {
+
+            var $this = $(this);
+            thisImage = $this.find('img');
+
+            var zoomUnzoom = gsap.timeline({
+                scrollTrigger: {
+                    trigger: $this,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 1
+                }
+            });
+
+            gsap.to($this, { '--b-width': '40px', '--b-radius': '80px' })
+
+            zoomUnzoom.from(thisImage, { scale: 1.2 }, 'sameTime')
+                .to(thisImage, { y: '100' }, 'sameTime');
+
+        });
+
+    };
+
+    function blockFeatured() {
+
+        $('.block--featured').each(function () {
+            var $this = $(this);
+            var thisLeft = $this.find('.featured__bar--left');
+            var thisRight = $this.find('.featured__bar--right');
+            var thisTop = $this.find('.featured__bar--top');
+            var thisBottom = $this.find('.featured__bar--bottom');
+            var thisImg = $this.find('img');
+            var thisTitle = $this.find('.featured__title');
+            var thisCta = $this.find('.featured__cta');
+            var parentIndex = $(this).parents('.section').index();
+
+
+            var featuredFrame = gsap.timeline({
+                scrollTrigger: {
+                    trigger: $this,
+                    pin: true,
+                    //anticipatePin: 1,
+                    //refreshPriority: -1500,
+                    start: 'top top',
+                    end: () => {
+                        return "+=" + window.innerHeight / 3;
+                    },
+                    scrub: 1,
+                    refreshPriority: - parentIndex
+                }
+            });
+
+            featuredFrame.to([thisLeft, thisRight], { scaleX: 1, duration: 1 }, "start")
+                .to([thisTop, thisBottom], { scaleY: 1, duration: 1 }, "start")
+                .to(thisImg, { scale: 1.1, duration: 1 }, "start")
+                .from(thisTitle, { yPercent: -10, autoAlpha: 0, duration: 1 }, "cta")
+                .from(thisCta, { yPercent: 10, autoAlpha: 0, duration: 1 }, "cta");
+        });
+
+    };
+
+    function blog(){
+
+        $('.blog-item').each(function(){
+
+            var $this = $(this);
+            var thisMedia = $this.find('.blog-item__media');
+
+            gsap.to(thisMedia, {
+                scrollTrigger: {
+                    trigger: $this,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    // markers: true,
+                    scrub: 1
+                },
+                y: '10vh'
+            });
+
+            if(!$this.is(':first-child')){
+                
+                gsap.from(thisMedia, {
+                    scrollTrigger: {
+                        trigger: $this,
+                        start: 'top bottom',
+                        end: 'center bottom',
+                        // markers: true,
+                        scrub: 1
+                    },
+                    autoAlpha: 0
+                });
+
+            };
+
+
+
+            // let productTitle = gsap.timeline({
+            //     scrollTrigger: {
+            //         trigger: $this,
+            //         start: 'center bottom',
+            //         onLeaveBack() {
+            //             productTitle.reverse(2);
+            //         },
+            //     }
+            // });
+
+            // productTitle.from(thisMainTitle, { autoAlpha: 0, yPercent: 25, rotate: 1.5 })
+            //     .from(thisSubTitle, { autoAlpha: 0, yPercent: 25, rotate: 1.5, delay: -.25 });
+
+        });
+
+    };
+
+    function singleProduct(){
+
+        $('.other-products__item').each(function(){
+
+            var $this = $(this);
+            var thisMedia = $this.find('.other-product__media');
+
+            gsap.to(thisMedia, {
+                scrollTrigger: {
+                    trigger: $this,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 1
+                },
+                y: '10vh'
+            });
+
+            gsap.from($this, {
+                scrollTrigger: {
+                    trigger: $this,
+                    start: 'top bottom',
+                    end: 'center bottom',
+                    scrub: 1
+                },
+                autoAlpha: 0
+            });
+
+
+        });
+
+    };
+
+    function footerScroll() {
+
+        // gsap.from('.footer', {
+        //     scrollTrigger: {
+        //         trigger: '.footer',
+        //         start: 'top bottom',
+        //         end: 'top 75%',
+        //         scrub: true
+        //     },
+        //     '--footer-bg-color': '#fff'
+        // });
+
+    };
+
+
+});

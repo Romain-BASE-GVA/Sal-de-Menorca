@@ -1,0 +1,10 @@
+.blog {
+    padding: 0 $gutter;
+
+
+}
+
+.blog-list {
+    @include clean-list;
+    
+}

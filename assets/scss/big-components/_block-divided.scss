@@ -1,0 +1,92 @@
+.divided {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+}
+
+.divided__side {
+	flex: 0 0 50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.single-media {
+	width: 100%;
+	height: 100%;
+}
+
+.single-media__video,
+.single-media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.multiple {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.multiple__item {
+	--top-left: 100%;
+	--top-right: 100%;
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	clip-path: polygon(0 0, 100% 0, 100% var(--top-right), 0% var(--top-left));
+}
+
+.multiple__front,
+.multiple__back {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.multiple__front {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 40px;
+	color: white;
+	z-index: 10;
+}
+
+.multiple__title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 30px;
+	font-weight: 100;
+
+	span {
+		font-family: helvetica, arial, sans-serif;
+		font-size: 0.5em;
+		font-weight: normal;
+	}
+}
+
+.multiple__back {
+	z-index: 5;
+	background-color: black;
+}
+
+.multiple__back img {
+	--blur: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	filter: blur(var(--blur));
+}

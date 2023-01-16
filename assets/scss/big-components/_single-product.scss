@@ -1,0 +1,136 @@
+.single-product {
+    display: flex;
+
+    p {
+
+    }
+}
+
+.single-product__gallery {
+    position: sticky;
+    top: 0;
+    left: 0;
+    flex: 0 0 50%;
+    height: 100vh;
+}
+
+.single-product__gallery-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    img {
+        @include object-cover;
+    }
+
+    &:last-child {
+        z-index: 1;
+    }
+
+    &:nth-last-child(2){
+        z-index: 2;
+    }
+
+    &:nth-last-child(3){
+        z-index: 3;
+    }
+
+    &:nth-last-child(4){
+        z-index: 4;
+    }
+
+    &:nth-last-child(5){
+        z-index: 5;
+    }
+
+    &:nth-last-child(6){
+        z-index: 6;
+    }
+
+    &:nth-last-child(7){
+        z-index: 7;
+    }
+
+    &:nth-last-child(8){
+        z-index: 8;
+    }
+
+    &:nth-last-child(9){
+        z-index: 9;
+    }
+
+    &:nth-last-child(10){
+        z-index: 10;
+    }
+}
+
+.single-product__text {
+    flex: 0 0 50%;
+    color: $primary;
+}
+
+.single-product__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 $gutter;
+}
+
+.single-product__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+
+.single-product__title__main {
+    @include fs-biggest-clamp;
+    text-transform: uppercase;
+}
+
+.single-product__title__sub {
+    @include fs-biggest-clamp;
+}
+
+.single-product__amount {
+    @include fs-md;
+    font-family: $font-text;
+    text-transform: uppercase;
+}
+
+.single-product__details {
+    @include fs-lg;
+    text-align: center;
+    font-family: $font-text;
+    width: 50%;
+    margin-top: $gutter*3;
+}
+
+.single-product__buy {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50vw;
+    height: 200px;
+    background-color: red;
+}
+
+.single-product__more {
+
+}
+
+.single-product__receipe {
+
+}
+
+.single-product__last-img {
+    height: 100vh;
+
+    img {
+        @include object-cover;
+    }
+}

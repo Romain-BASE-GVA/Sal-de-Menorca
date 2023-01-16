@@ -1,0 +1,94 @@
+.topbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: $gutter;
+    // background-color: $white;
+    color: $white;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+    z-index: 20;
+
+    a {
+        color: currentColor;
+        text-decoration: none;
+    }
+
+    path {
+        transition: color 0.3s ease-in-out;
+    }
+}
+
+.topbar--light {
+	color: $white;
+
+	path {
+		fill: $white;
+	}
+}
+
+.topbar--dark {
+	color: $primary;
+
+	path {
+		fill: $primary;
+	}
+}
+
+.topbar--product-open {
+    .topbar__nav {
+        color: $white;
+    }
+}
+
+.topbar__sigle {
+    width: 2em;
+    margin: 0 1em;
+
+    path {
+        fill: currentColor;
+    }
+}
+
+.topbar__lang {
+    display: flex;
+    flex: 0 0 150px;
+    justify-content: flex-start;
+}
+
+.topbar__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 100%;
+    @include fs-xl;
+    transition: color 0.3s ease-in-out;
+
+    .topbar--product-open & {
+        color: $white;
+    }
+
+    @media (max-width: $lg){
+        @include fs-lg;
+    }
+}
+
+.topbar__nav__text {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 200px;
+
+    @media (max-width: $lg){
+        flex: 0 0 150px;
+    }
+}
+
+.topbar__cart {
+    display: flex;
+    flex: 0 0 150px;
+    justify-content: flex-end;
+}
