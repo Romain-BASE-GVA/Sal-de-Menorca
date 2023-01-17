@@ -46,32 +46,98 @@
         </div>
         <div class="topbar__cart">Your cart</div>
     </div>
+    <!-- product-nav -->
     <div class="product-nav">
         <div class="product-nav__wrapper">
             <ul class="product-nav__list">
+
+                <!-- Un produit -->
+
+                <li class="product-nav__item">
+
+                    <h2 class="product-nav__title">
+                        <span class="product-nav__title__main uppercase">Flor de Sal</span>
+                        <span class="product-nav__title__sub">Natural</span>
+                    </h2>
+
+                    <!-- Pour chaque variante du produit, un bouton avec un data-variant -->
+
+                    <div class="product-nav__switch">
+                        <div class="switch">
+                            <button class="switch__btn" data-variant="1">150gr</button>
+                            <button class="switch__btn" data-variant="2">400gr</button>
+                        </div>
+                    </div>
+
+                    <!-- 
+                        Pour chaque variante du produit, une image avec un data-img-variant 
+                        La premiere image a la class .product-nav__img--active
+                    -->
+
+                    <div class="product-nav__imgs">
+                        <div class="product-nav__imgs-wrapper">
+                            <img src="assets/media/img/product-nav-1.jpg" alt="#"
+                                class="product-nav__img product-nav__img--active" data-img-variant="1">
+                            <img src="assets/media/img/product-nav-2.jpg" alt="#"
+                                class="product-nav__img" data-img-variant="2">
+                        </div>
+                    </div>
+
+                    <!-- 
+                        Pour chaque variante du produit, un groupe de boutons avec un data-cta-variant 
+                        Le premier groupe de boutons a la class .product-nav__ctas--active
+                    -->
+
+                    <div class="product-nav__ctas product-nav__ctas--active btn-group" data-cta-variant="1">
+                        <a href="#" class="btn btn--light btn--neg"><span>See Product</span></a> <!-- Même url pour chaque variant -->
+                        <a href="#" class="btn btn--light btn--neg"><span>15E - Add to cart</span></a> <!-- Lien different par variant -->
+                    </div>
+
+                    <div class="product-nav__ctas btn-group" data-cta-variant="2">
+                        <a href="#" class="btn btn--light btn--neg"><span>See Product</span></a> <!-- Même url pour chaque variant -->
+                        <a href="#" class="btn btn--light btn--neg"><span>50E - Add to cart</span></a> <!-- Lien different par variant -->
+                    </div>
+
+                </li>
+
+                <!-- /Un produit -->
+
                 <li class="product-nav__item">
                     <h2 class="product-nav__title">
                         <span class="product-nav__title__main uppercase">Flor de Sal</span>
                         <span class="product-nav__title__sub">Natural</span>
                     </h2>
                     <div class="product-nav__switch">
-                        <div class="switch switch--2" data-active-item="1">
-                            <button class="switch__btn" data-price="10e">150gr</button>
-                            <button class="switch__btn" data-price="25e">400gr</button>
+                        <div class="switch" >
+                            <button class="switch__btn" data-variant="1">150gr</button>
+                            <button class="switch__btn" data-variant="2">400gr</button>
+                            <button class="switch__btn" data-variant="3">1kg</button>
                         </div>
                     </div>
                     <div class="product-nav__imgs">
                         <div class="product-nav__imgs-wrapper">
-                            <img src="assets/media/img/product-nav-1.jpg" alt="#"
-                                class="product-nav__img product-nav__img--active">
                             <img src="assets/media/img/product-nav-2.jpg" alt="#"
-                                class="product-nav__img">
+                                class="product-nav__img product-nav__img--active" data-img-variant="1">
+                            <img src="assets/media/img/product-nav-3.jpg" alt="#"
+                                class="product-nav__img" data-img-variant="2">
+                            <img src="assets/media/img/product-nav-1.jpg" alt="#"
+                                class="product-nav__img" data-img-variant="3">
                         </div>
                     </div>
-                    <div class="product-nav__ctas btn-group">
+
+                    <div class="product-nav__ctas product-nav__ctas--active btn-group" data-cta-variant="1">
                         <a href="#" class="btn btn--light btn--neg"><span>See Product</span></a>
                         <a href="#" class="btn btn--light btn--neg"><span>15E - Add to cart</span></a>
                     </div>
+                    <div class="product-nav__ctas btn-group" data-cta-variant="2">
+                        <a href="#" class="btn btn--light btn--neg"><span>See Product</span></a>
+                        <a href="#" class="btn btn--light btn--neg"><span>50E - Add to cart</span></a>
+                    </div>
+                    <div class="product-nav__ctas btn-group" data-cta-variant="3">
+                        <a href="#" class="btn btn--light btn--neg"><span>See Product</span></a>
+                        <a href="#" class="btn btn--light btn--neg"><span>100E - Add to cart</span></a>
+                    </div>
+
                 </li>
                 <li class="product-nav__item">
                     <h2 class="product-nav__title">
@@ -79,42 +145,40 @@
                         <span class="product-nav__title__sub">Natural</span>
                     </h2>
                     <div class="product-nav__switch">
-                        <div class="switch switch--3" data-active-item="1">
-                            <button class="switch__btn" data-price="10e">150gr</button>
-                            <button class="switch__btn" data-price="25e">400gr</button>
-                            <button class="switch__btn" data-price="40e">1kg</button>
+                        <div class="switch">
+                            <button class="switch__btn" data-variant="1">150gr</button>
+                            <button class="switch__btn" data-variant="2">400gr</button>
+                            <button class="switch__btn" data-variant="3">1kg</button>
+                            <button class="switch__btn" data-variant="4">2kg</button>
                         </div>
                     </div>
                     <div class="product-nav__imgs">
                         <div class="product-nav__imgs-wrapper">
-                            <img src="assets/media/img/product-nav-2.jpg" alt="#"
-                                class="product-nav__img product-nav__img--active">
                             <img src="assets/media/img/product-nav-3.jpg" alt="#"
-                                class="product-nav__img">
-                        </div>
-                    </div>
-                    <div class="product-nav__ctas btn-group">
-                        <a href="#" class="btn btn--light btn--neg"><span>See Product</span></a>
-                        <a href="#" class="btn btn--light btn--neg"><span>15E - Add to cart</span></a>
-                    </div>
-                </li>
-                <li class="product-nav__item">
-                    <h2 class="product-nav__title">
-                        <span class="product-nav__title__main uppercase">Flor de Sal</span>
-                        <span class="product-nav__title__sub">Natural</span>
-                    </h2>
-                    <div class="product-nav__switch">150gr</div>
-                    <div class="product-nav__imgs">
-                        <div class="product-nav__imgs-wrapper">
-                            <img src="assets/media/img/product-nav-3.jpg" alt="#"
-                                class="product-nav__img product-nav__img--active">
+                                class="product-nav__img product-nav__img--active" data-img-variant="1">
                             <img src="assets/media/img/product-nav-1.jpg" alt="#"
-                                class="product-nav__img">
+                                class="product-nav__img" data-img-variant="2">
+                            <img src="assets/media/img/product-nav-2.jpg" alt="#"
+                                class="product-nav__img" data-img-variant="3">
+                            <img src="assets/media/img/product-nav-3.jpg" alt="#"
+                                class="product-nav__img" data-img-variant="4">
                         </div>
                     </div>
-                    <div class="product-nav__ctas btn-group">
+                    <div class="product-nav__ctas product-nav__ctas--active btn-group" data-cta-variant="1">
                         <a href="#" class="btn btn--light btn--neg"><span>See Product</span></a>
                         <a href="#" class="btn btn--light btn--neg"><span>15E - Add to cart</span></a>
+                    </div>
+                    <div class="product-nav__ctas btn-group" data-cta-variant="2">
+                        <a href="#" class="btn btn--light btn--neg"><span>See Product</span></a>
+                        <a href="#" class="btn btn--light btn--neg"><span>50E - Add to cart</span></a>
+                    </div>
+                    <div class="product-nav__ctas btn-group" data-cta-variant="3">
+                        <a href="#" class="btn btn--light btn--neg"><span>See Product</span></a>
+                        <a href="#" class="btn btn--light btn--neg"><span>100E - Add to cart</span></a>
+                    </div>
+                    <div class="product-nav__ctas btn-group" data-cta-variant="4">
+                        <a href="#" class="btn btn--light btn--neg"><span>See Product</span></a>
+                        <a href="#" class="btn btn--light btn--neg"><span>400E - Add to cart</span></a>
                     </div>
                 </li>
             </ul>
@@ -122,20 +186,40 @@
 
     </div>
     <div class="blur-all"></div>
+    <!-- /product-nav -->
     <main data-topbar-class="topbar--dark">
         <section class="section section--single-product">
             <div class="single-product">
+
+                <!-- Pour chaque single produit :
+                    1 - Le premier item .single-product__gallery-item est un wrapper pour chaque variant (1 image par variant), avec la classe .single-product__gallery-item--first
+                        1.1 Une image pour chaque variant avec data-img-variant, le premier avec la class .active
+                    2 - une listes d'image.
+                -->
+
                 <div class="single-product__gallery">
-                    <div class="single-product__gallery-item">
-                        <img src="assets/media/img/single-product-1.jpg" alt="">
+
+                    <!-- 1 -->
+                    <div class="single-product__gallery-item single-product__gallery-item--first">
+                        <!-- 1.1 -->
+                        <img src="assets/media/img/single-product-1.jpg" alt="" class="active" data-img-variant="1">
+                        <img src="assets/media/img/product-nav-2.jpg" alt="" data-img-variant="2">
+                        <!-- /1.1-->
                     </div>
+                    <!-- /1 -->
+
+                    <!-- 2 -->
                     <div class="single-product__gallery-item">
                         <img src="assets/media/img/single-product-2.jpg" alt="">
                     </div>
+
                     <div class="single-product__gallery-item">
                         <img src="assets/media/img/single-product-3.jpg" alt="">
                     </div>
+                    <!-- /2 -->
+
                 </div>
+
                 <div class="single-product__text">
                     <header class="single-product__header">
                         <h1 class="single-product__title">
@@ -234,7 +318,14 @@
                         <img src="assets/media/img/single-product-4.jpg" alt="">
                     </div>
                 </div>
-                <div class="single-product__buy">buy</div>
+                <div class="single-product__buy">
+                    <div class="single-product__switch">
+                        <div class="switch">
+                            <button class="switch__btn" data-variant="1" data-amout="5.6 oz / 150 gr">150gr</button>
+                            <button class="switch__btn" data-variant="2" data-amout="8 oz / 450 gr">400gr</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section section--other-products">

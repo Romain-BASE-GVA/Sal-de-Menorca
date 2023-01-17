@@ -107,6 +107,7 @@
     aspect-ratio: 16/9;
     border-radius: $radius;
     overflow: hidden;
+    background-color: $white;
 }
 
 .product-nav__imgs-wrapper {
@@ -119,18 +120,28 @@
 
 .product-nav__img {
     position: absolute;
-    display: block;
+    //display: none;
     top: 0;
     left: 0;
+    opacity: 0;
+    visibility: hidden;
     @include object-cover;
+    transition: all .25s ease-in-out;
 }
 
 .product-nav__img--active {
-
+    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .product-nav__ctas {
     margin-top: $gutter;
+    display: none;
+
+    &--active {
+        display: flex;
+    }
 }
 
 .ctas {

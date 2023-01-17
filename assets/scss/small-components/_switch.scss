@@ -1,14 +1,15 @@
 .switch {
+    --active-after-x: 0;
     position: relative;
     display: flex;
     height: 56px;
     padding: 0;
     background-color: rgba($white, .2);
-    border: 6px solid rgba($white, .1;
+    border: 6px solid transparent;
     color: white;
     border-radius: 56px;
     font-family: $font-text;
-    
+
     &:before {
         content: "";
         position: absolute;
@@ -19,7 +20,18 @@
         width: 140px;
         border-radius: 56px;
         background-color: $primary;
+        transform: translate3d(var(--active-after-x), 0, 0);
+        transition: all .25s ease-in-out;
         //z-index: -1;
+    }
+
+    .single-product__switch & {
+        background-color: rgb(204, 204, 224);
+        color: $primary;
+
+        &:before {
+            background-color: $white;
+        }
     }
 
 }

@@ -115,6 +115,22 @@
     }
 }
 
+.single-product__gallery-item--first {
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .25s ease-in-out;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
 .single-product__text {
     flex: 0 0 50%;
     color: $primary;
@@ -173,8 +189,13 @@
     right: 0;
     width: 50vw;
     height: 200px;
-    background-color: red;
-    display: none;
+    background-color: white;
+    //display: none;
+}
+
+.single-product__switch {
+    display: flex;
+    justify-content: center;
 }
 
 .single-product__more {
