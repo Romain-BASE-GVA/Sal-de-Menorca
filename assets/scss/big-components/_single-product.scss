@@ -2,7 +2,8 @@
     display: flex;
 
     p {
-
+        @include fs-lg;
+        font-family: $font-text;
     }
 }
 
@@ -64,11 +65,60 @@
     &:nth-last-child(10){
         z-index: 10;
     }
+
+    &:not(:last-child) {
+
+        --mask-dot-width-in: 200%;
+        --mask-dot-width-out: 100%;
+        --mask-dot-opacity: 1;
+        mask: radial-gradient(
+            circle at 60% 30%,
+            rgba(0, 0, 0, var(--mask-dot-opacity)) var(--mask-dot-width-out),
+            rgba(0, 0, 0, 0) var(--mask-dot-width-in)
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(0, 0, 0, var(--mask-dot-opacity)) var(--mask-dot-width-out),
+            rgba(0, 0, 0, 0) var(--mask-dot-width-in)
+        ),
+        radial-gradient(
+            circle at 75% 60%,
+            rgba(0, 0, 0, var(--mask-dot-opacity)) var(--mask-dot-width-out),
+            rgba(0, 0, 0, 0) var(--mask-dot-width-in)
+        ),
+        radial-gradient(
+            circle at 25% 45%,
+            rgba(0, 0, 0, var(--mask-dot-opacity)) var(--mask-dot-width-out),
+            rgba(0, 0, 0, 0) var(--mask-dot-width-in)
+        ),
+        radial-gradient(
+            circle at 69% 10%,
+            rgba(0, 0, 0, var(--mask-dot-opacity)) var(--mask-dot-width-out),
+            rgba(0, 0, 0, 0) var(--mask-dot-width-in)
+        ),
+        radial-gradient(
+            circle at 50% 22%,
+            rgba(0, 0, 0, var(--mask-dot-opacity)) var(--mask-dot-width-out),
+            rgba(0, 0, 0, 0) var(--mask-dot-width-in)
+        ),
+        radial-gradient(
+            circle at 23% 40%,
+            rgba(0, 0, 0, var(--mask-dot-opacity)) var(--mask-dot-width-out),
+            rgba(0, 0, 0, 0) var(--mask-dot-width-in)
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(0, 0, 0, var(--mask-dot-opacity)) var(--mask-dot-width-out),
+            rgba(0, 0, 0, 0) var(--mask-dot-width-in)
+        );
+        
+    }
 }
 
 .single-product__text {
     flex: 0 0 50%;
     color: $primary;
+    text-align: center;
 }
 
 .single-product__header {
@@ -87,6 +137,11 @@
     line-height: 1;
 }
 
+.single-product__sub-title {
+    @include fs-xxl-clamp;
+    text-transform: uppercase;
+}
+
 .single-product__title__main {
     @include fs-biggest-clamp;
     text-transform: uppercase;
@@ -103,11 +158,13 @@
 }
 
 .single-product__details {
-    @include fs-lg;
-    text-align: center;
-    font-family: $font-text;
+
     width: 50%;
     margin-top: $gutter*3;
+}
+
+.single-product__receipe-details {
+    width: 75%;
 }
 
 .single-product__buy {
@@ -117,14 +174,22 @@
     width: 50vw;
     height: 200px;
     background-color: red;
+    display: none;
 }
 
 .single-product__more {
-
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0 $gutter;
 }
 
 .single-product__receipe {
-
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .single-product__last-img {

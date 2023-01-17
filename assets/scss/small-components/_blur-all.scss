@@ -10,7 +10,7 @@
     backdrop-filter: blur(0);
     cursor: pointer;
     transition: all .5s ease-out;
-    z-index: 5;
+    z-index: 14;
 
     .product-nav--is-open+& {
         opacity: 1;

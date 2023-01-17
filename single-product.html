@@ -54,7 +54,12 @@
                         <span class="product-nav__title__main uppercase">Flor de Sal</span>
                         <span class="product-nav__title__sub">Natural</span>
                     </h2>
-                    <div class="product-nav__switch">150gr</div>
+                    <div class="product-nav__switch">
+                        <div class="switch switch--2" data-active-item="1">
+                            <button class="switch__btn" data-price="10e">150gr</button>
+                            <button class="switch__btn" data-price="25e">400gr</button>
+                        </div>
+                    </div>
                     <div class="product-nav__imgs">
                         <div class="product-nav__imgs-wrapper">
                             <img src="assets/media/img/product-nav-1.jpg" alt="#"
@@ -73,7 +78,13 @@
                         <span class="product-nav__title__main uppercase">Flor de Sal</span>
                         <span class="product-nav__title__sub">Natural</span>
                     </h2>
-                    <div class="product-nav__switch">150gr</div>
+                    <div class="product-nav__switch">
+                        <div class="switch switch--3" data-active-item="1">
+                            <button class="switch__btn" data-price="10e">150gr</button>
+                            <button class="switch__btn" data-price="25e">400gr</button>
+                            <button class="switch__btn" data-price="40e">1kg</button>
+                        </div>
+                    </div>
                     <div class="product-nav__imgs">
                         <div class="product-nav__imgs-wrapper">
                             <img src="assets/media/img/product-nav-2.jpg" alt="#"
@@ -137,15 +148,86 @@
                         </div>
                     </header>
                     <div class="single-product__more">
-                        <div class="dropdowns">
-                            drop
-                        </div>
+                        <ul class="dropdowns">
+                            <li class="dropdown">
+                                <button class="dropdown__trigger">
+                                    <span class="dropdown__label">Advisory</span>
+                                    <span class="dropdown__plus"></span>
+                                    <!--
+                                    <svg version="1.1" class="dropdown__arrow" id="Calque_1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        x="0px" y="0px" viewBox="0 0 6.7 12.8"
+                                        style="enable-background:new 0 0 6.7 12.8;" xml:space="preserve">
+                                        <g transform="translate(-11.000000, -9.000000)">
+                                            <polyline points="11.4,21.4 17.2,15.6 17.2,15.2 11.4,9.4" />
+                                        </g>
+                                    </svg>
+                                    -->
+                                </button>
+                                <div class="dropdown__content">
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo alias minima
+                                            corporis
+                                            quis eum quam eaque numquam, fugit temporibus, fuga aut reiciendis quod amet
+                                            molestiae error ad rerum nostrum impedit.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In harum voluptates
+                                            cumque
+                                            consequuntur alias facere labore ullam eum, itaque voluptatum, porro
+                                            eligendi
+                                            rem
+                                            accusamus quia reprehenderit nam iste aliquam. Sint! Lorem ipsum dolor sit
+                                            amet
+                                            consectetur adipisicing elit. Quia aperiam quas dolor repudiandae quaerat
+                                            optio
+                                            doloribus voluptates quis nemo modi praesentium officiis cum dolores, aut,
+                                            deserunt
+                                            totam maiores quo voluptate.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropdown__trigger">
+                                    <span class="dropdown__label">History</span>
+                                    <span class="dropdown__plus"></span>
+                                    <!--
+                                    <svg version="1.1" class="dropdown__arrow" id="Calque_1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        x="0px" y="0px" viewBox="0 0 6.7 12.8"
+                                        style="enable-background:new 0 0 6.7 12.8;" xml:space="preserve">
+                                        <g transform="translate(-11.000000, -9.000000)">
+                                            <polyline points="11.4,21.4 17.2,15.6 17.2,15.2 11.4,9.4" />
+                                        </g>
+                                    </svg>
+                                    -->
+                                </button>
+                                <div class="dropdown__content">
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo alias minima
+                                            corporis
+                                            quis eum quam eaque numquam, fugit temporibus, fuga aut reiciendis quod amet
+                                            molestiae error ad rerum nostrum impedit.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In harum voluptates
+                                            cumque
+                                            consequuntur alias facere labore ullam eum, itaque voluptatum, porro
+                                            eligendi
+                                            rem
+                                            accusamus quia reprehenderit nam iste aliquam. Sint! Lorem ipsum dolor sit
+                                            amet
+                                            consectetur adipisicing elit. Quia aperiam quas dolor repudiandae quaerat
+                                            optio
+                                            doloribus voluptates quis nemo modi praesentium officiis cum dolores, aut,
+                                            deserunt
+                                            totam maiores quo voluptate.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                         <div class="single-product__receipe">
-                            <h2>Receipe</h2>
-                            <div>
+                            <h2 class="single-product__sub-title">Receipe</h2>
+                            <div class="single-product__receipe-details">
                                 <p>Gambas al ajillo are on every Spanish restaurant menu — for good reason! It's a dish of shrimp cloaked in garlic-infused olive oil with smoky hints of paprika and a touch of sweetness from sherry. Make sure you have all your ingredients together before you head to the stove since, start to finish, this cooks in mere minutes. It's great for a tapas party since you can prep everything ahead of time. Just spoon the shrimp and sauce over toasted bread and sprinkle more cayenne and parsley on top to enjoy.</p>
                             </div>
-                            <a href="#" class="btn btn--light btn--neg"><span>See the full receipe</span></a>
+                            <a href="#" class="btn btn--dark btn--neg"><span>See the full receipe</span></a>
                         </div>
                     </div>
                     <div class="single-product__last-img">

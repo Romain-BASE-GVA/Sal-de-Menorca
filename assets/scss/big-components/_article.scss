@@ -1,19 +1,24 @@
 .article {
     color: $primary;
+    padding: 0 $gutter $gutter;
+
+    @media (max-width: $sm){
+        padding: 0 $gutter/2 $gutter/2;
+    }
 }
 
 .article__block {
     margin-top: $gutter*2;
     margin-bottom: $gutter*2;
-    padding-right: $gutter;
-    padding-left: $gutter;
+
 
     &:first-child {
         margin-top: 0;
     }
 
-    @media (max-width: $sm){
-        padding-right: $gutter/2;
-        padding-left: $gutter/2;
+    &:last-child {
+        margin-bottom: 0;
     }
+
+
 }

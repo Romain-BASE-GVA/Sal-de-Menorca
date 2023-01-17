@@ -9,11 +9,9 @@
     color: $white;
     border-bottom-right-radius: $radius;
     border-bottom-left-radius: $radius;
-    
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: clip-path .5s ease-out;
-
-    z-index: 10;
+    z-index: 15;
 
     &--is-open {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -98,7 +96,9 @@
 }
 
 .product-nav__switch {
-
+    display: flex;
+    justify-content: center;
+    margin-bottom: $gutter/2;
 }
 
 .product-nav__imgs {

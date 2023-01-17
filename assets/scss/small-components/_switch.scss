@@ -1,0 +1,60 @@
+.switch {
+    position: relative;
+    display: flex;
+    height: 56px;
+    padding: 0;
+    background-color: rgba($white, .2);
+    border: 6px solid rgba($white, .1;
+    color: white;
+    border-radius: 56px;
+    font-family: $font-text;
+    
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        height: 100%;
+        width: 140px;
+        border-radius: 56px;
+        background-color: $primary;
+        //z-index: -1;
+    }
+
+}
+
+.switch__btn {
+    //flex: 0 1 100%;
+    margin: 0;
+    width: 140px;
+    padding: 0;
+    background-color: transparent;
+    color: currentColor;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 5;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    // .switch--1 & {
+    //     width: 200px;
+    // }
+
+    // .switch--2 & {
+    //     flex: 0 0 calc(50% - 10px);
+    // }
+
+    // .switch--3 & {
+    //     flex: 0 0 calc((100% / 3));
+    // }
+
+    // .switch--4 & {
+    //     flex: 0 0 calc((100% / 4));
+    // }
+}

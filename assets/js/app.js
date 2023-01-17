@@ -13,6 +13,7 @@ $(document).ready(function () {
     blockFeatured();
     blog();
     singleProduct();
+    dropdowns();
     footerScroll();
 
     function productNav() {
@@ -483,6 +484,20 @@ $(document).ready(function () {
 
     function singleProduct(){
 
+        var galleryItems = $('.single-product__gallery-item').not(':last-child');
+
+        let singleProductGallery = gsap.timeline({
+            scrollTrigger: {
+              trigger: '.single-product__text',
+              start: 'top top', // when the top of the trigger hits the top of the viewport
+              end: 'bottom bottom', // end after scrolling 500px beyond the start
+              scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+            }
+        });
+
+        singleProductGallery    .to(galleryItems, { '--mask-dot-width-in': 0, '--mask-dot-width-out': '-5%', stagger: 1, duration: 1 }, 'start')
+                                // .to(galleryItems, { '--mask-dot-opacity': 0, stagger: 1, duration: 1 }, 'start+=.5');
+
         $('.other-products__item').each(function(){
 
             var $this = $(this);
@@ -511,6 +526,36 @@ $(document).ready(function () {
 
         });
 
+    };
+
+    function dropdowns() {
+        $('.dropdown__trigger').on('click', function () {
+            //console.log('DROPDOWN CLICKED');
+            var thisDropdown = $(this).parent('.dropdown');
+            var isOpen = thisDropdown.hasClass('dropdown--is-open');
+            var dropdownContent = thisDropdown.find('.dropdown__content');
+            var dropdownContentHeight = dropdownContent.find('>div').outerHeight(true);
+
+            if (!isOpen) {
+                gsap.to(dropdownContent, {
+                    height: dropdownContentHeight, duration: .75,
+                    onStart: function () {
+                        thisDropdown.addClass('dropdown--is-open');
+                    },
+                    onComplete: function () {
+                        dropdownContent.css('height', 'auto');
+                        ScrollTrigger.refresh();
+                    }
+                });
+            } else {
+                gsap.to(dropdownContent, {
+                    height: 0, duration: .75, onComplete: function () {
+                        thisDropdown.removeClass('dropdown--is-open');
+                        ScrollTrigger.refresh();
+                    }
+                });
+            }
+        });
     };
 
     function footerScroll() {
