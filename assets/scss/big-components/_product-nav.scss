@@ -51,6 +51,11 @@
             height: $gutter*3;
         }
     }
+
+    @media (max-width: $md){
+        border-bottom-right-radius: $radius/2;
+        border-bottom-left-radius: $radius/2;
+    }
 }
 
 .product-nav__wrapper {

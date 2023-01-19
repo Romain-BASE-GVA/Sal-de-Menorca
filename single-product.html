@@ -13,8 +13,14 @@
 </head>
 
 <body>
+    <!-- TOPBAR 
+        exactement la même structure sur chaque page
+    -->
     <div class="topbar topbar--light">
-        <div class="topbar__lang">En</div>
+        <div class="topbar__lang">
+            En
+            <!-- Tu peux insérer ici le lang switcher, je le styliserai par la suite -->
+        </div>
         <div class="topbar__nav">
             <a href="#" class="topbar__nav__text product-nav-trigger">Shop</a>
             <a href="home.html" class="topbar__a">
@@ -44,8 +50,13 @@
             </a>
             <a href="blog.html" class="topbar__nav__text">Explore</a>
         </div>
-        <div class="topbar__cart">Your cart</div>
+        <div class="topbar__cart">
+            Your cart
+            <!-- Tu peux insérer ici le module CART, je le styliserai par la suite -->
+        </div>
     </div>
+
+    <!-- /TOPBAR -->
     <!-- product-nav -->
     <div class="product-nav">
         <div class="product-nav__wrapper">
@@ -361,6 +372,25 @@
             </div>
         </section>
     </main>
+    <!-- FOOTER
+        Le même sur toutes les pages avec l'attribut data-topbar-class="topbar--light"
+
+        Champs globaux pour le footer :
+
+            - Titre dessus (Sea, sun, wind)
+            - Titre dessous (It's more than salt,<br>it's the soul of Menorca.)
+            - Une liste .footer__top__list (repeater) avec
+                - Un titre 
+                - Du text 
+            
+            - un champ "Copyright"
+
+            - 3 navigations
+                - legal
+                - products (le premier lien "shop" ouvre le dropdown produits)
+                - autres pages ou liens
+    -->
+
     <footer class="footer" data-topbar-class="topbar--light">
         <div class="footer__top">
             <div class="footer__slogan">
@@ -435,6 +465,8 @@
             </div>
         </div>
     </footer>
+
+<!-- /FOOTER -->
 
     <script src="assets/js/main.min.js"></script>
 

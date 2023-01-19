@@ -1,15 +1,8 @@
 .article-media {
-
-}
-
-.article-media--single {
-
-}
-
-.article-media--multiple {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .article-media--full {
@@ -46,53 +39,16 @@
 
     @media (max-width: $sm){
         > div {
-            grid-column: 2/12;
+            grid-column: 1/13;
         }
     }
 }
-
-
 
 .article-media__frame {
     position: relative;
+    flex: 0 0 calc(50% - 10px);
     border-radius: $radius;
     overflow: hidden;
-
-    img {
-        position: absolute;
-        display: block;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform-origin: bottom;
-    }
-
-    &--screen {
-        width: 100%;
-        height: calc(100vh - 80px);
-
-        img {
-            height: calc(100vh + 100px);
-        }
-    }
-
-    @media (max-width: $md){
-        border-radius: $radius/2;
-    }
-    // .article-media--full & {
-    //     img {
-    //         height: 100%;
-    //     }
-    // }
-
-    
-
-}
-
-.article-media--small .article-media__frame {
-    border-radius: $radius/2;
 
     &--24-36 {
         aspect-ratio: 24/36;
@@ -118,16 +74,45 @@
         aspect-ratio: 1/1;
     }
 
+    &--screen {
+        width: 100%;
+        height: calc(100vh - $gutter*2);
+    }
+
+    img {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform-origin: bottom;
+    }
+
+    .article-media--full & {
+        img {
+            height: calc(100% + 10vh);
+
+            @media (max-width: $lg){
+                height: 100%;
+            }
+        }
+    }
+
+    &:only-child {
+        flex: 0 0 100%;
+    }
+
     &:nth-child(n+3){
         margin-top: $gutter/2;
     }
 
-}
+    .article-media--small & {
+        border-radius: $radius/2;
+    }
 
-.article-media--multiple .article-media__frame {
-    flex: 0 0 calc(50% - 10px);
-}
-
-.article-media--single .article-media__frame {
-    flex: 0 0 100%;
+    @media (max-width: $md){
+        border-radius: $radius/2;
+    }
 }

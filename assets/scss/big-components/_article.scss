@@ -1,6 +1,27 @@
 .article {
     padding: 0 $gutter $gutter;
 
+    h2, h3, h4, h5 {
+        margin-bottom: 1em;
+        font-family: $font-brand;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.75em;
+    }
+
+    h4 {
+        font-size: 1.5em;
+    }
+
+    h5 {
+        font-size: 1.25em;
+    }
+
     @media (max-width: $md){
         padding: 0 $gutter/2 $gutter/2;
     }
