@@ -233,7 +233,7 @@ $(document).ready(function () {
             var $thisSingleMedia = $(this).find('.divided__side--single-media');
             var $thisItems = $this.find('.multiple__item');
             var numOfItem = $thisItems.length;
-            var $thisMainImg = $this.find('.single-media img').length ? $this.find('.single-media img') : $this.find('.single-media video');
+            var $thisMainImg = $this.find('.single-media img, .single-media video');
             var parentIndex = $(this).parents('.section').index();
 
             var curtainAnim = gsap.timeline({

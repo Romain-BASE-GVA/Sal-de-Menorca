@@ -11,10 +11,16 @@
 }
 
 .section--text {
+    position: relative;
     padding: 0 $gutter;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: $gutter;
+
+    .btn-group {
+        position: absolute;
+        bottom: $gutter;
+    }
 
     @media (max-width: $md){
         padding: 0 $gutter/2;

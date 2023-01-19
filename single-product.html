@@ -242,7 +242,13 @@
                             <p>Fleur de sel is the lightest, most ephemeral. Its production is dictated by water, sun and wind, and its harvest is a matter of hours before the flakes fall.</p>
                         </div>
                     </header>
+
                     <div class="single-product__more">
+                        <!-- DROPDOWNS 
+                            Champs Repeater avec :
+                            - 1 titre
+                            - Wysiwyg simple
+                        -->
                         <ul class="dropdowns">
                             <li class="dropdown">
                                 <button class="dropdown__trigger">
@@ -317,6 +323,7 @@
                                 </div>
                             </li>
                         </ul>
+                        <!-- /DROPDOWNS -->
                         <div class="single-product__receipe">
                             <h2 class="single-product__sub-title">Receipe</h2>
                             <div class="single-product__receipe-details">
@@ -387,7 +394,7 @@
 
             - 3 navigations
                 - legal
-                - products (le premier lien "shop" ouvre le dropdown produits)
+                - products (le premier lien "shop" ouvre le dropdown produits avec la class .product-nav-trigger)
                 - autres pages ou liens
     -->
 
@@ -452,7 +459,7 @@
             </div>
             <div class="footer__bottom__right">
                 <ul class="footer-nav">
-                    <li class="footer-nav__item"><a href="#">Shop</a></li>
+                    <li class="footer-nav__item"><a href="#" class="product-nav-trigger">Shop</a></li>
                     <li class="footer-nav__item"><a href="#">Natural</a></li>
                     <li class="footer-nav__item"><a href="#">Mediterranean</a></li>
                     <li class="footer-nav__item"><a href="#">Hot pepper</a></li>
