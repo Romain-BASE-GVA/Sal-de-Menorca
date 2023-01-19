@@ -61,7 +61,6 @@
     </div>
 
     <!-- /TOPBAR -->
-
     <!-- product-nav -->
     <div class="product-nav">
         <div class="product-nav__wrapper">
@@ -204,12 +203,205 @@
     <div class="blur-all"></div>
     <!-- /product-nav -->
 
+    <!-- 
+        HEADER
+
+        Le header sur la page blog.html est +- le même que sur la page single.html
+        - data-topbar-class="topbar--dark" -> idem
+        - .header__title sur la page single.html | .header__title ET .header__title--small sur la page blog.html
+        - le span .header__cat seulement sur single.html, c'est la categorie du blog post
+    -->
+
+    <header class="header header--regular header--regular--small" data-topbar-class="topbar--dark">
+        <h1 class="header__title header__title--small">Terms</h1>
+    </header>
+
+    <!-- /HEADER -->
+
     <main data-topbar-class="topbar--dark">
-        <div class="screen-404">
-            <h1>Oups! This page failed to charge. Go Back</h1>
-            <a href="#" class="btn btn--dark btn--neg"><span>Go Home</span></a>
-        </div>
-    </main>
+        <article class="article">
+
+            <!-- 
+                ARTICLE BLOCK
+
+                3 types de block differents :
+                    
+                    1. TEXT : .article-text.article__block
+                    2. BLOCKQUOTE : .article-blockquote.article__block
+                    3. MEDIA : .article-media.article__block
+
+                TOUJOURS avec la class .article__block, ces block peuvent être reordonnés, similaire au flexible content de ACF.
+                Le premier block est TOUJOURS un .article__block.article-media.article-media--full (voir la structure html du premier block de cette page), c'est l'image principale du blog post.
+
+                1. TEXT 
+                    - Un Wysiwyg Simple (p, header, list, a, ...)
+
+                    <div class="article__block article-text">
+                        <div>
+                            <h2>Title h2</h2>
+                            <p> The salt-mining tradition of the island of Menorca can easily be traced back to the 14th century, when we discovered one of the first documentary references known to date. It is found in a decree published by Cavaller(1) Dalmau Sagarriga, Royal Lieutenant of the Kingdom of Majorca, and addressed to Pere de Llivia, Bayle(2) of Minorca. In 1303, Sagarriga proclaimed, by his authority, that the harvesting of salt would be free on the island of Menorca.</p>
+                        </div>
+                    </div>
+
+                2. BLOCKQUOTE
+                    - Juste du texte, eventuellement plusieur <p>
+
+                    <div class="article__block article-blockquote">
+                        <blockquote>
+                            <p>It should be understood that this provision related to the free harvesting of salt, but that it was intended for particular and private uses.</p>
+                        </blockquote>
+                    </div>
+
+                3. MEDIA
+                    - 2 types de MEDIA :
+                        A. .article-media--full => qui prend toute la largeur de la page
+                        B. .article-media--small => qui prend la largeur d'un block de type TEXT
+
+                        La structure est très légèrement différente : 
+                        dans le cas d' .article-media--small, il y a un block wrapper supplementaire sans class.
+                    
+                    - Ensuite c'est une gallerie d'image avec une class de ratio (peut comporter une ou plusieur images): 
+                        .article-media__frame +
+                            .article-media__frame--24-36
+                            .article-media__frame--36-24
+                            .article-media__frame--6-7
+                            .article-media__frame--7-6
+                            .article-media__frame--16-9
+                            .article-media__frame--1-1
+                            .article-media__frame--screen
+                    
+                    A.
+
+                    <div class="article__block article-media article-media--small">
+                        <div>
+                            <div class="article-media__frame article-media__frame--16-9">
+                                <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" alt="">
+                            </div>
+                            <div class="article-media__frame article-media__frame--6-7">
+                                <img src="https://assets.codepen.io/225413/cala-de-sal-full-2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    B.
+
+                    <div class="article__block article-media article-media--full">
+                        <div class="article-media__frame article-media__frame--16-9">
+                            <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" alt="">
+                        </div>
+                        <div class="article-media__frame article-media__frame--6-7">
+                            <img src="https://assets.codepen.io/225413/cala-de-sal-full-2.jpg" alt="">
+                        </div>
+                    </div>
+            -->
+
+            <!--
+            <div class="article__block article-media article-media--full">
+                <div class="article-media__frame article-media__frame--screen">
+                    <img src="https://assets.codepen.io/225413/cala-featured.jpg" alt="">
+                </div>
+            </div>
+            -->
+
+            <div class="article__block article-text">
+                <div>
+                    <h2>Title h2</h2>
+                    <h3>Title h3</h3>
+                    <h4>Title h4</h4>
+                    <h5>Title h5</h5>
+                    <p> The salt-mining tradition of the island of Menorca can easily be traced back to the 14th century, when we discovered one of the first documentary references known to date. It is found in a decree published by Cavaller(1) Dalmau Sagarriga, Royal Lieutenant of the Kingdom of Majorca, and addressed to Pere de Llivia, Bayle(2) of Minorca. In 1303, Sagarriga proclaimed, by his authority, that the harvesting of salt would be free on the island of Menorca.</p>
+                </div>
+            </div>
+
+            <div class="article__block article-blockquote">
+                <blockquote>
+                    <p>It should be understood that this provision related to the free harvesting of salt, but that it was intended for particular and private uses.</p>
+                </blockquote>
+            </div>
+
+            <div class="article__block article-text">
+                <div>
+                    <p>That is to say to provide for <a href="#" title="personal consumption">personal consumption</a>  , without leading to a possible commercial production.</p> 
+                    <p>This arrangement thus persisted for centuries, at least until the appearance of the first administrative regulations and the first projects for increased production, geared towards business objectives. This represents a very late stage in time, if we compare it with the early commercial activity experienced by the islands of Mallorca and Ibiza, from the earliest times in history.</p>
+                    <p>This supposes that, in the specific case of Menorca, the salt activity was maintained for centuries without really reaching an appreciable level of production and without ever constituting an extractive activity oriented towards commercial or commercial objectives on a large scale. This state of affairs contrasts, on the other hand, with two very different realities, if we consider the long salt-mining history of the island of Majorca and, above all, that which has been noted in the two Pitiuses, Ibiza and Formentera.</p>
+                    <ul>
+                        <li>list item 1</li>
+                        <li>list item 1</li>
+                        <li>list item 1</li>
+                        <li>list item 1</li>
+                    </ul>
+                    <ol>
+                        <li>list item 1</li>
+                        <li>list item 1</li>
+                        <li>list item 1</li>
+                        <li>list item 1</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="article__block article-media article-media--small">
+                <div>
+                    <div class="article-media__frame article-media__frame--16-9">
+                        <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" alt="">
+                    </div>
+                    <div class="article-media__frame article-media__frame--6-7">
+                        <img src="https://assets.codepen.io/225413/cala-de-sal-full-2.jpg" alt="">
+                    </div>
+                    <div class="article-media__frame article-media__frame--24-36">
+                        <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" alt="">
+                    </div>
+                    <div class="article-media__frame article-media__frame--6-7">
+                        <img src="https://assets.codepen.io/225413/cala-de-sal-full-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="article__block article-media article-media--small">
+                <div>
+                    <div class="article-media__frame article-media__frame--16-9">
+                        <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="article__block article-text">
+                <div>
+                    <p>That is to say to provide for personal consumption, without leading to a possible commercial production.</p> 
+                    <p>This arrangement thus persisted for centuries, at least until the appearance of the first administrative regulations and the first projects for increased production, geared towards business objectives. This represents a very late stage in time, if we compare it with the early commercial activity experienced by the islands of Mallorca and Ibiza, from the earliest times in history.</p>
+                    <p>This supposes that, in the specific case of Menorca, the salt activity was maintained for centuries without really reaching an appreciable level of production and without ever constituting an extractive activity oriented towards commercial or commercial objectives on a large scale. This state of affairs contrasts, on the other hand, with two very different realities, if we consider the long salt-mining history of the island of Majorca and, above all, that which has been noted in the two Pitiuses, Ibiza and Formentera.</p>
+                </div>
+            </div>
+
+            <div class="article__block article-media article-media--small">
+                <div>
+                    <div class="article-media__frame article-media__frame--16-9">
+                        <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="article__block article-media article-media--full">
+                <div class="article-media__frame article-media__frame--16-9">
+                    <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" alt="">
+                </div>
+                <div class="article-media__frame article-media__frame--16-9">
+                    <img src="https://assets.codepen.io/225413/cala-de-sal-full-2.jpg" alt="">
+                </div>
+                <div class="article-media__frame article-media__frame--24-36">
+                    <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" alt="">
+                </div>
+                <div class="article-media__frame article-media__frame--16-9">
+                    <img src="https://assets.codepen.io/225413/cala-de-sal-full-2.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="article__block article-media article-media--full">
+                <div class="article-media__frame article-media__frame--screen">
+                    <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" alt="">
+                </div>
+            </div>
+
+        </article>
 
     <!-- FOOTER
         Le même sur toutes les pages avec l'attribut data-topbar-class="topbar--light"

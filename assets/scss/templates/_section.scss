@@ -19,7 +19,15 @@
 
     .btn-group {
         position: absolute;
-        bottom: $gutter;
+        bottom: $gutter*2;
+    }
+
+
+
+    @media (max-width: $lg){
+        .btn-group {
+            bottom: $gutter;
+        }
     }
 
     @media (max-width: $md){

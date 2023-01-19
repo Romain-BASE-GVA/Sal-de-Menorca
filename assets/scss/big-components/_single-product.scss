@@ -187,16 +187,28 @@
 
 .single-product__buy {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     bottom: 0;
     right: 0;
     width: 50vw;
     height: 200px;
-    background-color: white;
+    //background-color: white;
 }
 
 .single-product__switch {
     display: flex;
     justify-content: center;
+    margin-bottom: $gutter/2;
+}
+
+.single-product__cta {
+    display: none;
+
+    &--active {
+        display: block;
+    }
 }
 
 .single-product__more {

@@ -7,6 +7,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+    
     <link rel="stylesheet" href="assets/css/main.min.css">
 
     <meta name="theme-color" content="#fafafa">
@@ -206,6 +210,16 @@
                     1 - Le premier item .single-product__gallery-item est un wrapper pour chaque variant (1 image par variant), avec la classe .single-product__gallery-item--first
                         1.1 Une image pour chaque variant avec data-img-variant, le premier avec la class .active
                     2 - une listes d'image.
+                    3 - Derniere image (partie droite)
+                    4 - Une courte description
+                    5 - Dropdown (Repeater)
+                        - titre
+                        - un champ text Wysiwig simple (h2,h3, p, <a>, ...)
+                    6 - Block more (Receipe)
+                            - Titre (Dans ce cas ci receipe)
+                            - un champ text Wysiwig simple (h2,h3, p, <a>, ...)
+                            - un lien (bouton)
+                    7 - Un produit picker (qui permet d'afficher 2 autres produits en fin de page)
                 -->
 
                 <div class="single-product__gallery">
@@ -247,23 +261,13 @@
                         <!-- DROPDOWNS 
                             Champs Repeater avec :
                             - 1 titre
-                            - Wysiwyg simple
+                            - Wysiwyg simple (text, a, list, ...)
                         -->
                         <ul class="dropdowns">
                             <li class="dropdown">
                                 <button class="dropdown__trigger">
                                     <span class="dropdown__label">Advisory</span>
                                     <span class="dropdown__plus"></span>
-                                    <!--
-                                    <svg version="1.1" class="dropdown__arrow" id="Calque_1"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        x="0px" y="0px" viewBox="0 0 6.7 12.8"
-                                        style="enable-background:new 0 0 6.7 12.8;" xml:space="preserve">
-                                        <g transform="translate(-11.000000, -9.000000)">
-                                            <polyline points="11.4,21.4 17.2,15.6 17.2,15.2 11.4,9.4" />
-                                        </g>
-                                    </svg>
-                                    -->
                                 </button>
                                 <div class="dropdown__content">
                                     <div>
@@ -290,16 +294,6 @@
                                 <button class="dropdown__trigger">
                                     <span class="dropdown__label">History</span>
                                     <span class="dropdown__plus"></span>
-                                    <!--
-                                    <svg version="1.1" class="dropdown__arrow" id="Calque_1"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        x="0px" y="0px" viewBox="0 0 6.7 12.8"
-                                        style="enable-background:new 0 0 6.7 12.8;" xml:space="preserve">
-                                        <g transform="translate(-11.000000, -9.000000)">
-                                            <polyline points="11.4,21.4 17.2,15.6 17.2,15.2 11.4,9.4" />
-                                        </g>
-                                    </svg>
-                                    -->
                                 </button>
                                 <div class="dropdown__content">
                                     <div>
@@ -332,9 +326,11 @@
                             <a href="#" class="btn btn--dark btn--neg"><span>See the full receipe</span></a>
                         </div>
                     </div>
+                    <!-- 3 -->
                     <div class="single-product__last-img">
                         <img src="assets/media/img/single-product-4.jpg" alt="">
                     </div>
+                    <!-- /3 -->
                 </div>
                 <div class="single-product__buy">
                     <div class="single-product__switch">
@@ -342,6 +338,14 @@
                             <button class="switch__btn" data-variant="1" data-variant-name="5.6 oz / 150 gr">150gr</button>
                             <button class="switch__btn" data-variant="2" data-variant-name="8 oz / 450 gr">400gr</button>
                         </div>
+                    </div>
+                    <div class="single-product__cta single-product__cta--active" data-cta-variant="1">
+                        VARIANT 1 - 150gr - Quantity and add to card
+                        <!-- Tu peux insérer ici le module quantité et ajouter au cart, je le styliserai par la suite  -->
+                    </div>
+                    <div class="single-product__cta" data-cta-variant="2">
+                        VARIANT 2 - 400gr - Quantity and add to card
+                        <!-- Tu peux insérer ici le module quantité et ajouter au cart, je le styliserai par la suite  -->
                     </div>
                 </div>
             </div>

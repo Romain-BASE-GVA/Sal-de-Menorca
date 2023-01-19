@@ -3,7 +3,11 @@
     @include fs-xxl-clamp;
     line-height: 1;
     text-align: center;
-    padding: 3em 0;
+    padding: 4em 0 calc(4em + $gutter*2) 0;
+
+    &:only-child {
+        padding: 4em 0;
+    }
 
     &--big {
         @include fs-xxxl-clamp;

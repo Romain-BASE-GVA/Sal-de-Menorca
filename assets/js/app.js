@@ -622,6 +622,7 @@ $(document).ready(function () {
                 thisVariant = $this.data('variant'),
                 thisVariantName = $this.data('variant-name'),
                 thisRelatedImg = $('.single-product__gallery-item--first').find('[data-img-variant="' + thisVariant + '"]');
+                thisRelatedCta = $('[data-cta-variant="' + thisVariant + '"]');
 
             gsap.set(thisSwitch, { '--active-after-x': 'calc(' + (thisVariant - 1) * 100 + '% + ' + (thisVariant - 1) * 10 + 'px)' });
 
@@ -629,6 +630,10 @@ $(document).ready(function () {
 
             $('.single-product__gallery-item--first img').removeClass('active');
             thisRelatedImg.addClass('active');
+
+            $('.single-product__cta').removeClass('single-product__cta--active');
+            thisRelatedCta.addClass('single-product__cta--active');
+            
         });
 
     };
