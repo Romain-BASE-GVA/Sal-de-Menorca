@@ -2,12 +2,34 @@
 	display: flex;
 	width: 100%;
 	height: 100vh;
+
+	@media (orientation: portrait){
+		flex-direction: column;
+	}
+
+	@media (max-width: $md){
+        height: auto;
+    }
+
 }
 
 .divided__side {
 	flex: 0 0 50%;
 	height: 100%;
 	overflow: hidden;
+
+	@media (max-width: $md){
+		flex: unset;
+		height: auto;
+		width: 100%;
+		aspect-ratio: 1/1.25;
+    }
+}
+
+.divided__side--single-media {
+	@media (max-width: $md){
+        display: none;
+    }
 }
 
 .single-media {
@@ -38,7 +60,6 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-
 	clip-path: polygon(0 0, 100% 0, 100% var(--top-right), 0% var(--top-left));
 }
 
@@ -46,10 +67,17 @@
 .multiple__back {
 	position: absolute;
 	display: block;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	top: $gutter;
+	left: $gutter;
+	width: calc(100% - $gutter * 2);
+	height: calc(100% - $gutter * 2);
+
+	@media (max-width: $md){
+		top: $gutter / 2;
+		left: $gutter / 2;
+		width: calc(100% - $gutter);
+		height: calc(100% - $gutter);
+    }
 }
 
 .multiple__front {
@@ -57,28 +85,36 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	padding: 40px;
-	color: white;
+	padding: $gutter*2 $gutter $gutter;
 	z-index: 10;
+
+	@media (orientation: portrait){
+		padding: $gutter;
+	}
 }
 
 .multiple__title {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-size: 30px;
-	font-weight: 100;
+	@include fs-xl-clamp;
 
 	span {
-		font-family: helvetica, arial, sans-serif;
-		font-size: 0.5em;
-		font-weight: normal;
+		@include fs-md;
+		font-family: $font-text;
+		text-transform: uppercase;
 	}
 }
 
 .multiple__back {
 	z-index: 5;
 	background-color: black;
+	border-radius: $radius;
+	overflow: hidden;
+
+	@media (max-width: $md){
+        border-radius: $radius/2;
+    }
 }
 
 .multiple__back img {

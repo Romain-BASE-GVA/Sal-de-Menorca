@@ -20,11 +20,12 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: $gutter;
-    padding: 0 $gutter;
+    // padding: 0 $gutter;
     @include fs-lg;
 
     >div {
         display: flex;
+        flex-wrap: wrap;
         align-items: flex-start;
         justify-content: space-between;
         grid-column: 5/9;
@@ -54,7 +55,7 @@
 
 .article-media__frame {
     position: relative;
-    border-radius: $gutter;
+    border-radius: $radius;
     overflow: hidden;
 
     img {
@@ -77,6 +78,9 @@
         }
     }
 
+    @media (max-width: $md){
+        border-radius: $radius/2;
+    }
     // .article-media--full & {
     //     img {
     //         height: 100%;
@@ -88,14 +92,14 @@
 }
 
 .article-media--small .article-media__frame {
-    border-radius: $gutter/2;
+    border-radius: $radius/2;
 
-    &--3-4 {
-        aspect-ratio: 3/4;
+    &--24-36 {
+        aspect-ratio: 24/36;
     }
 
-    &--4-3 {
-        aspect-ratio: 4/3;
+    &--36-24 {
+        aspect-ratio: 36/24;
     }
 
     &--6-7 {
@@ -112,6 +116,10 @@
 
     &--1-1 {
         aspect-ratio: 1/1;
+    }
+
+    &:nth-child(n+3){
+        margin-top: $gutter/2;
     }
 
 }

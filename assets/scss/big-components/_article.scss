@@ -1,8 +1,7 @@
 .article {
-    color: $primary;
     padding: 0 $gutter $gutter;
 
-    @media (max-width: $sm){
+    @media (max-width: $md){
         padding: 0 $gutter/2 $gutter/2;
     }
 }
@@ -22,3 +21,7 @@
 
 
 }
+
+// .article-media--small + .article-media--small {
+//     margin-top: $gutter/2;
+// }

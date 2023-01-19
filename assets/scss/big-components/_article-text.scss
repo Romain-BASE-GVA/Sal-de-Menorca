@@ -3,6 +3,7 @@
     grid-template-columns: repeat(12, 1fr);
     grid-gap: $gutter;
     @include fs-lg;
+    font-family: $font-text;
 
     >div {
         grid-column: 5/9;
@@ -12,6 +13,14 @@
         font-family: $font-text;
         
         line-height: 1.25
+    }
+
+    ul, ol {
+        padding: 0 0 0 1em;
+    }
+
+    a {
+        color: inherit;
     }
 
     @media (max-width: $xxl){

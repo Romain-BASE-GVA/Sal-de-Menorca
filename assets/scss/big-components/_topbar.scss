@@ -21,6 +21,14 @@
     path {
         transition: color 0.3s ease-in-out;
     }
+
+    @media (max-width: $lg){
+        padding: $gutter/2 $gutter;
+    }
+
+    @media (max-width: $md){
+        padding: $gutter/2;
+    }
 }
 
 .topbar--light {
@@ -51,6 +59,16 @@
 
     path {
         fill: currentColor;
+    }
+}
+
+.topbar__lang,
+.topbar__cart {
+    font-family: $font-text;
+    @include fs-md;
+
+    @media (max-width: $lg){
+        @include fs-sm;
     }
 }
 

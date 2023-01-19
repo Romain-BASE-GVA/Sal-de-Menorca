@@ -1,7 +1,9 @@
 .blog {
     padding: 0 $gutter $gutter;
 
-
+    @media (max-width: $md){
+        padding: 0 $gutter/2 $gutter/2;
+    }
 }
 
 .blog-list {

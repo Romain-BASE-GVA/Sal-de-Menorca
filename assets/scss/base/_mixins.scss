@@ -35,12 +35,12 @@
     font-size: 4rem;
 }
 
-// @mixin fs-xl-clamp {
-//     font-size: 40px;
-//     font-size: 4rem;
-//     font-size: min(max(20px, 2.7vw), 60px);
-//     font-size: clamp(20px, 2.7vw, 60px);
-// }
+@mixin fs-xl-clamp {
+    font-size: 40px;
+    font-size: 4rem;
+    font-size: min(max(32px, 2.32vw), 60px);
+    font-size: clamp(32px, 2.32vw, 60px);
+}
 
 @mixin fs-xxl {
     font-size: 60px;

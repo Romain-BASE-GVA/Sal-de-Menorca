@@ -1,0 +1,24 @@
+.screen-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../media/img/tile.jpg);
+    background-size: cover;
+    background-position: center;
+
+    h1 {
+        width: 80%;
+        @include fs-biggest-clamp;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: .25em;
+
+        span {
+            display: inline-block;
+        }
+    }
+}

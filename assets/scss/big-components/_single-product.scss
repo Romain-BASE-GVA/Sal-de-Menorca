@@ -116,6 +116,8 @@
 }
 
 .single-product__gallery-item--first {
+    background-color: $white;
+
     img {
         position: absolute;
         top: 0;
@@ -133,7 +135,6 @@
 
 .single-product__text {
     flex: 0 0 50%;
-    color: $primary;
     text-align: center;
 }
 
@@ -156,6 +157,7 @@
 .single-product__sub-title {
     @include fs-xxl-clamp;
     text-transform: uppercase;
+    margin-bottom: 1em
 }
 
 .single-product__title__main {
@@ -167,7 +169,7 @@
     @include fs-biggest-clamp;
 }
 
-.single-product__amount {
+.single-product__variant {
     @include fs-md;
     font-family: $font-text;
     text-transform: uppercase;
@@ -190,7 +192,6 @@
     width: 50vw;
     height: 200px;
     background-color: white;
-    //display: none;
 }
 
 .single-product__switch {
@@ -211,6 +212,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: $gutter*4 0;
+
+    .btn {
+        margin-top: $gutter*2;
+    }
 }
 
 .single-product__last-img {

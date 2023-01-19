@@ -20,70 +20,21 @@
     background-color: transparent;
     color: inherit;
     padding: 1em 0 1em 0;
-    // border-top: 1px solid $primary;
     @include fs-md;
     text-transform: uppercase;
-    //font-weight: var(--font-text-weight-em);
     padding: 1em 0;
     cursor: pointer;
-    // border-top: 1px solid $primary;
-
-
-    // &:before {
-    //     content: "";
-    //     position: absolute;
-    //     display: block;
-    //     left: 0;
-    //     top: -1px;
-    //     width: 100%;
-    //     height: 1px;
-    //     background-color: $primary;
-    //     transform-origin: left center;
-    //     transform: scalex(0) translate3d(0, 0, 0);
-    //     transition: all 0.4s cubic-bezier(0.5, 0.5, 0, 1);
-    // }
-
-    // &:hover {
-    //     &:before {
-    //         transform: scalex(1) translate3d(0, 0, 0);
-    //     }
-    // }
-
-    // .dropdown--is-open & {
-    //     &:before {
-    //         transform: scalex(1) translate3d(0, 0, 0);
-    //     }
-    // }
 }
 
 .dropdown__label {
     display: block;
-    transform: translate3d(0, 0 ,0);
+    transform: translate3d(0, 0, 0);
     transition: all 0.4s cubic-bezier(0.5, 0.5, 0, 1);
 
     .dropdown__trigger:hover & {
-        transform: translate3d(1em, 0 ,0);
+        transform: translate3d(1em, 0, 0);
     }
 }
-
-// .dropdown__arrow {
-//     height: 1em;
-//     transform: rotate(0) translate3d(0, 0 ,0);
-//     transition: all 0.4s cubic-bezier(0.5, 0.5, 0, 1);
-    
-//     polyline {
-//         fill: none;
-//         stroke: $primary;
-//     }
-
-//     .dropdown__trigger:hover & {
-//         transform: rotate(45deg) translate3d(0, 0 ,0);
-//     }
-
-//     .dropdown--is-open & {
-//         transform: rotate(90deg) translate3d(0, 0 ,0);
-//     }
-// }
 
 .dropdown__plus {
     display: flex;
@@ -92,7 +43,6 @@
     justify-content: center;
     width: 1em;
     height: 1em;
-    //background-color: grey;
 
     &:before,
     &:after {
@@ -108,14 +58,9 @@
 
     &:after {
         margin-top: -1px;
-        // background-color: red;
         transform: rotate(90deg) translate3d(0, 0, 0);
         @include transition;
     }
-
-    // .dropdown__trigger:hover & {
-    //     transform: rotate(45deg) translate3d(0, 0 ,0);
-    // }
 
     .dropdown--is-open & {
         &:after {
@@ -130,8 +75,10 @@
     align-items: center;
     height: 0;
     overflow: hidden;
+    will-change: height;
 
-    > div {
+
+    >div {
         padding: $gutter 0;
         width: 75%;
     }
@@ -141,7 +88,7 @@
     }
 
     .module--one-dropdown & {
-        > div {
+        >div {
             padding: 0;
         }
     }
