@@ -147,7 +147,15 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: calc(100% + 100px);
+    height: calc(100% + 10vh);
+
+    @media (orientation: landscape) {
+        height: calc(100% + 10vh);
+    }
+
+    @media (orientation: portrait) {
+        height: calc(100% + 10vw);
+    }
 }
 
 .product-nav__img {

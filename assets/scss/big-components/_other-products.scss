@@ -56,6 +56,14 @@
         object-fit: cover;
         object-position: center;
     }
+
+    @media (orientation: landscape) {
+        height: calc(100% + 10vh);
+    }
+
+    @media (orientation: portrait) {
+        height: calc(100% + 10vw);
+    }
 }
 
 .other-products__infos {

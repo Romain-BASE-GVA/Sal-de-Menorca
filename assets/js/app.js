@@ -77,7 +77,7 @@ $(document).ready(function () {
                     // markers: true,
                     scrub: 1
                 },
-                y: '100'
+                y: () => {return window.matchMedia('(orientation: portrait)').matches ? '10vw' : '10vh'}
             });
 
             gsap.from(thisImgWrapper, {
@@ -435,7 +435,7 @@ $(document).ready(function () {
                         // markers: true,
                         scrub: 1
                     },
-                    y: '10vh'
+                    y: () => {return window.matchMedia('(orientation: portrait)').matches ? '10vw' : '10vh'}
                 });
 
             });
@@ -499,7 +499,7 @@ $(document).ready(function () {
                     // markers: true,
                     scrub: 1
                 },
-                y: '10vh'
+                y: () => {return window.matchMedia('(orientation: portrait)').matches ? '10vw' : '10vh'}
             });
 
             if (!$this.is(':first-child')) {
@@ -564,8 +564,10 @@ $(document).ready(function () {
                     end: 'bottom top',
                     scrub: 1
                 },
-                y: '10vh'
+                y: () => {return window.matchMedia('(orientation: portrait)').matches ? '10vw' : '10vh'}
             });
+
+            
 
             gsap.from($this, {
                 scrollTrigger: {
