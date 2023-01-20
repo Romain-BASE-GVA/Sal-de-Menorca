@@ -12,7 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
     
     <link rel="stylesheet" href="assets/css/main.min.css">
-
+    <script>
+        var html = document.querySelector('html');
+        html.classList.remove('no-js');
+    </script>
     <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -55,14 +58,15 @@
             <a href="blog.html" class="topbar__nav__text">Explore</a>
         </div>
         <div class="topbar__cart">
-            Your cart
+            <span class="topbar__cart__desktop">Your cart</span>
+            <span class="topbar__cart__mobile">CA</span>
             <!-- Tu peux insérer ici le module CART, je le styliserai par la suite -->
         </div>
     </div>
 
     <!-- /TOPBAR -->
     <!-- product-nav -->
-    <div class="product-nav">
+    <div class="product-nav" data-lenis-prevent>
         <div class="product-nav__wrapper">
             <ul class="product-nav__list">
 
@@ -239,10 +243,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -257,10 +261,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The old construction technique of Menorca</h2>
-                                <span class="blog-item__cat">Culture</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -275,10 +279,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The ancestral way to cultivate salt</h2>
-                                <span class="blog-item__cat">Culture</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -293,10 +297,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">A Receipe from the sea</h2>
-                                <span class="blog-item__cat">Food</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -311,10 +315,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">Supporting local environment initiatives</h2>
-                                <span class="blog-item__cat">Nature</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -329,10 +333,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -347,10 +351,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -365,10 +369,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -383,10 +387,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -401,10 +405,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -419,10 +423,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -437,10 +441,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -455,10 +459,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -473,10 +477,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -491,10 +495,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -509,10 +513,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -527,10 +531,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -545,10 +549,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -563,10 +567,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -581,10 +585,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -599,10 +603,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -617,10 +621,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -635,10 +639,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -653,10 +657,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -671,10 +675,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -689,10 +693,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -707,10 +711,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -725,10 +729,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -743,10 +747,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -761,10 +765,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -779,10 +783,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -797,10 +801,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -815,10 +819,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -833,10 +837,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -851,10 +855,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -869,10 +873,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -887,10 +891,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -905,10 +909,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -923,10 +927,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -941,10 +945,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -959,10 +963,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -977,10 +981,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -995,10 +999,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -1013,10 +1017,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -1031,10 +1035,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -1049,10 +1053,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -1067,10 +1071,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -1085,10 +1089,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -1103,10 +1107,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -1121,10 +1125,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -1139,10 +1143,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -1157,10 +1161,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -1175,10 +1179,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -1193,10 +1197,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>
@@ -1211,10 +1215,10 @@
                             <img src="https://assets.codepen.io/225413/cala-de-sal-full-1.jpg" class="blog-item__img">
                         </div>
                         <div class="blog-item__infos">
-                            <div class="blog-item__top">
-                                <h2 class="blog-item__title">The Saltwork</h2>
-                                <span class="blog-item__cat">About Us</span>
-                            </div>
+                            <h2 class="title">
+                                <span class="title__main">The Saltwork</span>
+                                <span class="title__sub">About Us</span>
+                            </h2>
                             <div class="blog-item__bottom">
                                 <a href="#" class="btn btn--neg btn--light"><span>Read article</span></a>
                             </div>

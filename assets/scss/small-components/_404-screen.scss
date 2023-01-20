@@ -16,6 +16,13 @@
         text-align: center;
         text-transform: uppercase;
         margin-bottom: .25em;
+        opacity: 0;
+        visibility: hidden;
+
+        .no-js & {
+            opacity: 1;
+            visibility: visible;
+        }
 
         span {
             display: inline-block;

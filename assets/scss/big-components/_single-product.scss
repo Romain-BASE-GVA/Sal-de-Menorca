@@ -5,6 +5,21 @@
         @include fs-lg;
         font-family: $font-text;
     }
+    
+    @media (max-width: $lg){
+        flex-direction: column;
+
+        p {
+            @include fs-md;
+        }
+    }
+
+    @media (max-width: $md){
+        p {
+            @include fs-sm;
+        }
+    }
+
 }
 
 .single-product__gallery {
@@ -13,6 +28,14 @@
     left: 0;
     flex: 0 0 50%;
     height: 100vh;
+
+    @media (max-width: $lg){
+        position: relative;
+        flex: unset;
+        width: auto;
+        height: 50vh;
+        aspect-ratio: 1/1;
+    }
 }
 
 .single-product__gallery-item {
@@ -134,7 +157,7 @@
 }
 
 .single-product__text {
-    flex: 0 0 50%;
+    flex: 1 0 50%;
     text-align: center;
 }
 
@@ -144,7 +167,16 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 0 $gutter;
+    padding: $gutter;
+
+    @media (max-width: $lg){
+        min-height: 50vh;
+        padding: $gutter $gutter/2 $gutter;
+    }
+
+    @media (max-height: $lg) and (max-width: $md) {
+        justify-content: flex-start;
+    }
 }
 
 .single-product__title {
@@ -173,16 +205,45 @@
     @include fs-md;
     font-family: $font-text;
     text-transform: uppercase;
+
+    @media (max-width: $md){
+        @include fs-sm;
+    }
 }
 
 .single-product__details {
-
     width: 50%;
     margin-top: $gutter*3;
+
+    @media (max-width: $xl){
+        width: 75%;
+    }
+
+    @media (max-width: $lg){
+        // width: 90%;
+        margin-top: $gutter;
+    }
+
+    @media (max-width: $md){
+        width: 90%;
+    }
+
+    @media (max-width: $sm){
+        width: 100%;
+    }
+
 }
 
 .single-product__receipe-details {
     width: 75%;
+
+    @media (max-width: $md){
+        width: 90%;
+    }
+
+    @media (max-width: $sm){
+        width: 100%;
+    }
 }
 
 .single-product__buy {
@@ -193,8 +254,17 @@
     bottom: 0;
     right: 0;
     width: 50vw;
-    height: 200px;
+    padding: $gutter;
+    // height: 200px;
     //background-color: white;
+
+    @media (max-width: $lg){
+        width: 100%;
+    }
+
+    @media (max-width: $md){
+        padding: $gutter/2;
+    }
 }
 
 .single-product__switch {
@@ -205,6 +275,9 @@
 
 .single-product__cta {
     display: none;
+    background-color: $white;
+    padding: $gutter/2;
+    border: 1px solid $primary;
 
     &--active {
         display: block;
@@ -216,6 +289,10 @@
     flex-direction: column;
     min-height: 100vh;
     padding: 0 $gutter;
+
+    @media (max-width: $md){
+        padding: $gutter/2;
+    }
 }
 
 .single-product__receipe {

@@ -1,0 +1,23 @@
+.title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title__main {
+    @include fs-xl-clamp;
+
+    @media (max-width: $md){
+        @include fs-lg;
+    }
+}
+
+.title__sub {
+    font-family: $font-text;
+    @include fs-md;
+
+    @media (max-width: $md){
+        @include fs-sm;
+    }
+}

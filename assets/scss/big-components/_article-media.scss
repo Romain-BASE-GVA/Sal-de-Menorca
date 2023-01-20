@@ -38,6 +38,8 @@
     }
 
     @media (max-width: $sm){
+        display: block;
+
         > div {
             grid-column: 1/13;
         }
@@ -114,5 +116,9 @@
 
     @media (max-width: $md){
         border-radius: $radius/2;
+    }
+
+    @media (max-width: $sm){
+        border-radius: $radius/3;
     }
 }

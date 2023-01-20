@@ -12,7 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
     
     <link rel="stylesheet" href="assets/css/main.min.css">
-
+    <script>
+        var html = document.querySelector('html');
+        html.classList.remove('no-js');
+    </script>
     <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -55,14 +58,15 @@
             <a href="blog.html" class="topbar__nav__text">Explore</a>
         </div>
         <div class="topbar__cart">
-            Your cart
+            <span class="topbar__cart__desktop">Your cart</span>
+            <span class="topbar__cart__mobile">CA</span>
             <!-- Tu peux insérer ici le module CART, je le styliserai par la suite -->
         </div>
     </div>
 
     <!-- /TOPBAR -->
     <!-- product-nav -->
-    <div class="product-nav">
+    <div class="product-nav" data-lenis-prevent>
         <div class="product-nav__wrapper">
             <ul class="product-nav__list">
 
@@ -211,7 +215,7 @@
 
     <header class="header header--home" data-topbar-class="topbar--light">
         <div class="header--home__media">
-            <video src="https://www.romaingranai.be/codepen/SA_WEB_01-light.mp4" autoplay muted loop></video>
+            <video src="https://www.romaingranai.be/codepen/SA_WEB_01-light.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="header__logo">
 
@@ -299,9 +303,9 @@
                     <div class="multiple">
                         <div class="multiple__item">
                             <div class="multiple__front">
-                                <h2 class="multiple__title">
-                                    FLOR de Sal
-                                    <span>Natural 150 gr</span>
+                                <h2 class="title">
+                                    <span class="title__main">FLOR de Sal</span>
+                                    <span class="title__sub">Natural 150 gr</span>
                                 </h2>
                                 <div class="multiple__cta btn-group">
                                     <a href="#" class="btn btn--dark btn--neg"><span>Add to cart - 18€</span></a>
@@ -312,9 +316,9 @@
                         </div>
                         <div class="multiple__item">
                             <div class="multiple__front">
-                                <h2 class="multiple__title">
-                                    FLOR de Sal
-                                    <span>Mediteranean 150 gr</span>
+                                <h2 class="title">
+                                    <span class="title__main">FLOR de Sal</span>
+                                    <span class="title__sub">Natural 150 gr</span>
                                 </h2>
                                 <div class="multiple__cta btn-group">
                                     <a href="#" class="btn btn--dark btn--neg"><span>Add to cart - 18€</span></a>
@@ -336,9 +340,9 @@
                     <div class="multiple">
                         <div class="multiple__item">
                             <div class="multiple__front">
-                                <h2 class="multiple__title">
-                                    The Saltwork
-                                    <span>About us</span>
+                                <h2 class="title">
+                                    <span class="title__main">The Saltwork</span>
+                                    <span class="title__sub">About us</span>
                                 </h2>
                                 <div class="multiple__cta btn-group">
                                     <a href="#" class="btn btn--light btn--neg"><span>Read article</span></a>
@@ -348,9 +352,9 @@
                         </div>
                         <div class="multiple__item">
                             <div class="multiple__front">
-                                <h2 class="multiple__title">
-                                    The Saltwork
-                                    <span>About us</span>
+                                <h2 class="title">
+                                    <span class="title__main">The Saltwork</span>
+                                    <span class="title__sub">About us</span>
                                 </h2>
                                 <div class="multiple__cta btn-group">
                                     <a href="#" class="btn btn--light btn--neg"><span>Read article</span></a>
@@ -392,10 +396,10 @@
                 <div class="featured__bar featured__bar--bottom"></div>
                 <div class="featured__bar featured__bar--left"></div>
                 <div class="featured__bar featured__bar--right"></div>
-                <div class="featured__title">
-                    <h2>The Saltwork</h2>
-                    <span>About</span>
-                </div>
+                <h2 class="title">
+                    <span class="title__main">The Saltwork</span>
+                    <span class="title__sub">About</span>
+                </h2>
                 <div class="featured__cta"><a href="#" class="btn btn--light btn--neg"><span>Read Article</span></a></div>
                 <div class="featured__media">
                     <img src="https://assets.codepen.io/225413/cala-featured.jpg" alt="">
@@ -420,10 +424,10 @@
                 <div class="featured__bar featured__bar--bottom"></div>
                 <div class="featured__bar featured__bar--left"></div>
                 <div class="featured__bar featured__bar--right"></div>
-                <div class="featured__title">
-                    <h2>The Saltwork</h2>
-                    <span>About</span>
-                </div>
+                <h2 class="title">
+                    <span class="title__main">The Saltwork</span>
+                    <span class="title__sub">About</span>
+                </h2>
                 <div class="featured__cta"><a href="#" class="btn btn--light btn--neg"><span>Read Article</span></a></div>
                 <div class="featured__media">
                     <img src="https://assets.codepen.io/225413/cala-featured.jpg" alt="">

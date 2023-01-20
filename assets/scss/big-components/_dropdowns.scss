@@ -24,6 +24,10 @@
     text-transform: uppercase;
     padding: 1em 0;
     cursor: pointer;
+
+    @media (max-width: $md){
+		@include fs-sm;
+	}
 }
 
 .dropdown__label {
@@ -79,8 +83,17 @@
 
 
     >div {
-        padding: $gutter 0;
+        padding: 0 0 $gutter 0;
         width: 75%;
+
+        @media (max-width: $md){
+            width: 90%;
+            padding: 0 0 $gutter/2 0;
+        }
+
+        // @media (max-width: $sm){
+        //     width: 100%;
+        // }
     }
 
     .dropdown--is-open & {

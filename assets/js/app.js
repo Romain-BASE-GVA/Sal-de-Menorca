@@ -18,6 +18,25 @@ $(document).ready(function () {
     switches();
     footerScroll();
 
+    // const lenis = new Lenis({
+    //     duration: .75,
+    //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+    //     direction: 'vertical', // vertical, horizontal
+    //     gestureDirection: 'vertical', // vertical, horizontal, both
+    //     smooth: true,
+    //     mouseMultiplier: 1,
+    //     smoothTouch: false,
+    //     touchMultiplier: 2,
+    //     infinite: false,
+    // });
+
+    // function raf(time) {
+    //     lenis.raf(time)
+    //     requestAnimationFrame(raf)
+    // };
+
+    // requestAnimationFrame(raf);
+
     function productNav() {
 
         $('.product-nav-trigger').on('click', function (e) {
@@ -210,8 +229,10 @@ $(document).ready(function () {
             gsap.from(words, {
                 scrollTrigger: {
                     trigger: $(this),
-                    start: 'bottom bottom',
-                    end: 'bottom center',
+                    // start: 'bottom bottom',
+                    // end: 'bottom center',
+                    start: 'top 85%',
+                    end: 'center center',
                     scrub: 1,
                     refreshPriority: - parentIndex
                 },
@@ -247,7 +268,7 @@ $(document).ready(function () {
                     end: () => {
                         return '+=' + window.innerHeight * numOfItem;
                     },
-                    scrub: 1,
+                    scrub: .25,
                     refreshPriority: - parentIndex,
                     // snap: 1 / (numOfItem - 1),
                     snap: {
@@ -325,7 +346,7 @@ $(document).ready(function () {
             };
         });
 
-        $('.section--divided').each(function(){
+        $('.section--divided').each(function () {
             var $this = $(this);
 
             if ($this.find('.single-media video').length) {
@@ -335,9 +356,9 @@ $(document).ready(function () {
                     end: 'bottom center',
                     refreshPriority: -10000,
                     onEnter: function () {
-                       $this.find('.single-media video')[0].play();
+                        $this.find('.single-media video')[0].play();
                     },
-                    onEnterBack: function(){
+                    onEnterBack: function () {
                         $this.find('.single-media video')[0].play();
                     },
                     onLeave: function () {
@@ -349,7 +370,7 @@ $(document).ready(function () {
                 });
             };
         });
-    
+
     };
 
     function fullImgMelt() {
@@ -388,6 +409,7 @@ $(document).ready(function () {
         var words = articleTitleSplit.find('span');
 
         articleIntro
+            .set($('.header__title, .screen-404 h1'), {autoAlpha: 1})
             .from(words, {
                 autoAlpha: 0, yPercent: 50, duration: 1, ease: Expo.easeInOut, stagger: {
                     each: 0.05,
@@ -404,7 +426,7 @@ $(document).ready(function () {
             thisImage = $this.find('img');
 
             mm.add('(min-width: 993px)', () => {
-                
+
                 gsap.to(thisImage, {
                     scrollTrigger: {
                         trigger: $this,
@@ -433,7 +455,7 @@ $(document).ready(function () {
             var thisTop = $this.find('.featured__bar--top');
             var thisBottom = $this.find('.featured__bar--bottom');
             var thisImg = $this.find('img');
-            var thisTitle = $this.find('.featured__title');
+            var thisTitle = $this.find('.title');
             var thisCta = $this.find('.featured__cta');
             var parentIndex = $(this).parents('.section').index();
 
@@ -622,7 +644,7 @@ $(document).ready(function () {
                 thisVariant = $this.data('variant'),
                 thisVariantName = $this.data('variant-name'),
                 thisRelatedImg = $('.single-product__gallery-item--first').find('[data-img-variant="' + thisVariant + '"]');
-                thisRelatedCta = $('[data-cta-variant="' + thisVariant + '"]');
+            thisRelatedCta = $('.single-product__buy').find('[data-cta-variant="' + thisVariant + '"]');
 
             gsap.set(thisSwitch, { '--active-after-x': 'calc(' + (thisVariant - 1) * 100 + '% + ' + (thisVariant - 1) * 10 + 'px)' });
 
@@ -633,7 +655,7 @@ $(document).ready(function () {
 
             $('.single-product__cta').removeClass('single-product__cta--active');
             thisRelatedCta.addClass('single-product__cta--active');
-            
+
         });
 
     };

@@ -17,18 +17,25 @@
 	justify-content: center;
 	height: calc(100vh - 150px);
 	min-height: min-content;
+	padding: 0 $gutter;
 
 	&--small {
 		height: calc(60vh);
 	}
+
+	@media (max-width: $md){
+        padding: 0 $gutter/2;
+    }
 }
 
 .header__title {
-	width: 80%;
+	width: 85%;
 	@include fs-biggest-clamp;
 	line-height: 1;
 	text-align: center;
 	text-transform: uppercase;
+	opacity: 0;
+	visibility: hidden;
 
 	&--small {
 		@include fs-xxl-clamp;
@@ -37,6 +44,15 @@
 
 	span {
 		display: inline-block;
+	}
+
+	.no-js & {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	@media (max-width: $md){
+		width: 100%;
 	}
 }
 
@@ -50,6 +66,11 @@
 	text-transform: uppercase;
 	font-family: $font-text;
 	@include fs-md;
+
+	@media (max-width: $md){
+		@include fs-sm;
+		bottom: $gutter/2;
+	}
 }
 
 .header__logo {

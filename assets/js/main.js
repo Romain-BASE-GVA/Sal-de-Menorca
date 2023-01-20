@@ -1,4 +1,5 @@
 //@prepros-append vendor/jquery.js
+//@prepros-append vendor/lenis.js
 //@prepros-append vendor/gsap.js
 //@prepros-append vendor/scrollTrigger.js
 //@prepros-append vendor/scrollToPlugin.js

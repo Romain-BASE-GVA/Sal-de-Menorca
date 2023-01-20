@@ -41,7 +41,9 @@
     }
 
     @media (max-width: $sm){
+        grid-gap: 0;
         > div {
+            
             grid-column: 2/12;
         }
     }

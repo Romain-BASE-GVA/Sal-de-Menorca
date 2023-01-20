@@ -44,6 +44,16 @@
         }
     }
 
+    @media (max-width: $md){
+        height: 30px;
+        @include fs-smallest;
+        border: 3px solid transparent;
+
+        &:before {
+            width: 75px;
+        }
+    }
+
 }
 
 .switch__btn {
@@ -65,5 +75,9 @@
 
     @media (max-width: $xl){
         width: 100px;
+    }
+
+    @media (max-width: $md){
+        width: 75px;
     }
 }

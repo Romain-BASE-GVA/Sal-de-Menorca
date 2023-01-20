@@ -1,14 +1,25 @@
 .btn-group {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
 
     .btn {
-        margin-right: 1em;
+        margin: .5em;
+        flex-shrink: 0;
+        //flex-grow: 1;
 
-        &:last-child {
-            margin-right: 0;
+        // &:last-child {
+        //     margin-right: 0;
+        // }
+    }
+
+    @media (max-width: $md){
+
+        .btn {
+            margin: .25em;
         }
+        
     }
 }
 

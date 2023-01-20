@@ -12,7 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
     
     <link rel="stylesheet" href="assets/css/main.min.css">
-
+    <script>
+        var html = document.querySelector('html');
+        html.classList.remove('no-js');
+    </script>
     <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -55,7 +58,8 @@
             <a href="blog.html" class="topbar__nav__text">Explore</a>
         </div>
         <div class="topbar__cart">
-            Your cart
+            <span class="topbar__cart__desktop">Your cart</span>
+            <span class="topbar__cart__mobile">CA</span>
             <!-- Tu peux insérer ici le module CART, je le styliserai par la suite -->
         </div>
     </div>
@@ -63,7 +67,7 @@
     <!-- /TOPBAR -->
 
     <!-- product-nav -->
-    <div class="product-nav">
+    <div class="product-nav" data-lenis-prevent>
         <div class="product-nav__wrapper">
             <ul class="product-nav__list">
 

@@ -6,11 +6,11 @@
     text-decoration: none;
     color: inherit;
 
-    @media (max-width: $xl){
+    @media (max-width: $xl) {
         margin-top: $gutter*3;
     }
 
-    @media (max-width: $md){
+    @media (max-width: $md) {
         padding: 0 $gutter/2 0;
         margin-top: $gutter*2;
     }
@@ -25,19 +25,17 @@
     border-bottom: 1px solid currentColor;
     padding-bottom: .5em;
 
-    > div {
-        
-    }
+    >div {}
 
-    @media (max-width: $md){
+    @media (max-width: $md) {
         @include fs-sm;
     }
 }
 
 .next-article__arrow {
     position: relative;
-    width: 1em;
-    height: 1em;
+    width: .75em;
+    height: .75em;
     // background-color: rgb(175, 175, 175);
     // transform: rotate(45deg);
 
@@ -72,45 +70,54 @@
 }
 
 .next-article__header {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .next-article__title {
-	width: 80%;
-	@include fs-biggest-clamp;
-	line-height: 1;
-	text-align: center;
-	text-transform: uppercase;
+    width: 85%;
+    @include fs-biggest-clamp;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
     margin: 1em 0;
+
+    &--small {
+        @include fs-xxl-clamp;
+        text-transform: unset;
+    }
 
     span {
         display: inline-block;
     }
 
-    @media (max-width: $xxl){
+    @media (max-width: $xxl) {
         margin: 1em 0 2em;
+    }
+
+    @media (max-width: $md) {
+        width: 100%;
     }
 }
 
 .next-article__cat {
     position: absolute;
-	display: block;
-	bottom: $gutter;
-	left: 0;
-	width: 100%;
-	text-align: center;
-	text-transform: uppercase;
-	font-family: $font-text;
-	@include fs-md;
+    display: block;
+    bottom: $gutter;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-text;
+    @include fs-md;
 
-    @media (max-width: $lg){
+    @media (max-width: $lg) {
         bottom: $gutter/3*2;
     }
 
-    @media (max-width: $md){
+    @media (max-width: $md) {
         @include fs-sm;
         bottom: $gutter/2;
     }
@@ -129,7 +136,11 @@
         object-position: top center;
     }
 
-    @media (max-width: $md){
+    @media (max-width: $md) {
         border-radius: $radius/2 $radius/2 0 0;
+    }
+
+    @media (max-width: $sm){
+        border-radius: $radius/3 $radius/3 0 0;
     }
 }

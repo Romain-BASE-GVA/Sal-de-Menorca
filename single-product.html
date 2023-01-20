@@ -12,7 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
     
     <link rel="stylesheet" href="assets/css/main.min.css">
-
+    <script>
+        var html = document.querySelector('html');
+        html.classList.remove('no-js');
+    </script>
     <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -55,14 +58,15 @@
             <a href="blog.html" class="topbar__nav__text">Explore</a>
         </div>
         <div class="topbar__cart">
-            Your cart
+            <span class="topbar__cart__desktop">Your cart</span>
+            <span class="topbar__cart__mobile">CA</span>
             <!-- Tu peux insérer ici le module CART, je le styliserai par la suite -->
         </div>
     </div>
 
     <!-- /TOPBAR -->
     <!-- product-nav -->
-    <div class="product-nav">
+    <div class="product-nav" data-lenis-prevent>
         <div class="product-nav__wrapper">
             <ul class="product-nav__list">
 
@@ -357,10 +361,10 @@
                         <img src="assets/media/img/other-product-1.jpg" alt="">
                     </div>
                     <div class="other-products__infos">
-                        <div class="other-products__top">
-                            <h3 class="other-products__title">Flor de Sal</h3>
-                            <span class="other-products__details">Céramique natural 180gr</span>
-                        </div>
+                        <h3 class="title">
+                            <span class="title__main">Flor de Sal</span>
+                            <span class="title__sub">Céramique natural 180gr</span>
+                        </h3>
                         <div class="other-products__bottom">
                             <a href="#" class="btn btn--dark btn--neg"><span>See product</span> </a>
                         </div>
@@ -371,10 +375,10 @@
                         <img src="assets/media/img/other-product-2.jpg" alt="">
                     </div>
                     <div class="other-products__infos">
-                        <div class="other-products__top">
-                            <h3 class="other-products__title">Flor de Sal</h3>
-                            <span class="other-products__details">Céramique natural 180gr</span>
-                        </div>
+                        <h3 class="title">
+                            <span class="title__main">Flor de Sal</span>
+                            <span class="title__sub">Céramique natural 180gr</span>
+                        </h3>
                         <div class="other-products__bottom">
                             <a href="#" class="btn btn--dark btn--neg"><span>See product</span></a>
                         </div>

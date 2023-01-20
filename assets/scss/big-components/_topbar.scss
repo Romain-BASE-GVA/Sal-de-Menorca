@@ -60,22 +60,49 @@
     path {
         fill: currentColor;
     }
+
+    @media (max-width: $md){
+        margin: 0 .5em;
+    }
 }
 
 .topbar__lang,
 .topbar__cart {
     font-family: $font-text;
     @include fs-md;
+    display: flex;
+    flex: 0 0 150px;
 
     @media (max-width: $lg){
         @include fs-sm;
     }
+
+    @media (max-width: $md){
+        @include fs-smallest;
+        flex: 0 0 20px;
+    }
+    
 }
 
 .topbar__lang {
-    display: flex;
-    flex: 0 0 150px;
     justify-content: flex-start;
+}
+
+.topbar__cart {
+    justify-content: flex-end;
+
+    &__desktop {
+        @media (max-width: $md){
+            display: none;
+        }
+    }
+
+    &__mobile {
+        display: none;
+        @media (max-width: $md){
+            display: block;
+        }
+    }
 }
 
 .topbar__nav {
@@ -93,6 +120,14 @@
     @media (max-width: $lg){
         @include fs-lg;
     }
+
+    @media (max-width: $md){
+        @include fs-md;
+    }
+
+    @media (max-width: $sm){
+        @include fs-sm;
+    }
 }
 
 .topbar__nav__text {
@@ -103,10 +138,15 @@
     @media (max-width: $lg){
         flex: 0 0 150px;
     }
-}
 
-.topbar__cart {
-    display: flex;
-    flex: 0 0 150px;
-    justify-content: flex-end;
+    @media (max-width: $md){
+        flex: 0 0 110px;
+    }
+
+    @media (max-width: $sm){
+        flex: 0 0 90px;
+    }
+
+
+
 }

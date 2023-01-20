@@ -56,6 +56,11 @@
         border-bottom-right-radius: $radius/2;
         border-bottom-left-radius: $radius/2;
     }
+
+    @media (max-width: $sm){
+        border-bottom-right-radius: $radius/3;
+        border-bottom-left-radius: $radius/3;
+    }
 }
 
 .product-nav__wrapper {
@@ -109,6 +114,7 @@
     line-height: 1;
     @include fs-xxl-clamp;
     margin: 1em 0;
+    text-align: center;
     // overflow: hidden;
 }
 
@@ -125,9 +131,14 @@
     border-radius: $radius;
     overflow: hidden;
     background-color: $white;
+    isolation: isolate;
 
     @media (max-width: $md){
         border-radius: $radius/2;
+    }
+
+    @media (max-width: $sm){
+        border-radius: $radius/3;
     }
 }
 
@@ -157,7 +168,7 @@
 }
 
 .product-nav__ctas {
-    margin-top: $gutter;
+    margin-top: calc($gutter - 1em);
     display: none;
 
     &--active {

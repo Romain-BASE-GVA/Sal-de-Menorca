@@ -165,6 +165,7 @@
 	flex-wrap: wrap-reverse;
 	justify-content: space-between;
 	font-family: $font-text;
+	margin-top: $gutter/2*3;
 	@include fs-sm;
 
 	@media (max-width: $lg){
@@ -172,7 +173,7 @@
     }
 
 	@media (max-width: $sm){
-        margin-top: $gutter/2*3;
+        
 		flex-direction: column-reverse;
 		align-items: center;
     }
