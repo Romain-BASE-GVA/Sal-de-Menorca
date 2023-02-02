@@ -1,9 +1,13 @@
 .article {
     padding: 0 $gutter $gutter;
 
-    h2, h3, h4, h5 {
+    h1, h2, h3, h4, h5, h6 {
         margin-bottom: 1em;
         font-family: $font-brand;
+    }
+
+    h1 {
+        font-size: 2.5em;
     }
 
     h2 {
@@ -20,6 +24,10 @@
 
     h5 {
         font-size: 1.25em;
+    }
+
+    h6 {
+        font-size: 1em;
     }
 
     @media (max-width: $md){

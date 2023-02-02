@@ -86,9 +86,31 @@
 
 .topbar__lang {
     justify-content: flex-start;
+
+    button {
+        padding: 0;
+        border: 1px solid $primary;
+    }
+}
+
+#topbar__lang--form {
+    position: relative;
+}
+
+.topbar__lang--list-wrapper {
+    position: absolute;
+}
+
+.topbar__lang--list {
+    @include clean-list;
+}
+
+.topbar__lang--link--active {
+    display: none;
 }
 
 .topbar__cart {
+    position: relative;
     justify-content: flex-end;
 
     &__desktop {
@@ -103,6 +125,16 @@
             display: block;
         }
     }
+}
+
+#cart-icon-bubble {
+    position: absolute;
+    bottom: calc(100% - .75em);
+    left: 100%;
+    border: 1px solid currentColor;
+    border-radius: 20px;
+    font-size: .5em;
+    padding: .25em;
 }
 
 .topbar__nav {
@@ -149,4 +181,8 @@
 
 
 
+}
+
+cart-notification {
+    display: none;
 }

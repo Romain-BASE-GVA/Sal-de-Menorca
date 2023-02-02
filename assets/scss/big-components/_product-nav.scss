@@ -176,6 +176,7 @@
 }
 
 .product-nav__ctas {
+    position: relative;
     margin-top: calc($gutter - 1em);
     display: none;
 
@@ -184,6 +185,37 @@
     }
 }
 
+.product-form__error-message-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    font-family: $font-text;
+    @include fs-sm;
+
+    span {
+        padding-top: 1rem;
+    }
+
+    svg {
+        display: none;
+    }
+    
+    @media (max-width: $sm){
+        @include fs-smallest;
+    }
+
+}
+
+
+
 .ctas {
 
+}
+
+.loading-overlay__spinner {
+    margin-left: .25em;
+    width: .8em;
 }
