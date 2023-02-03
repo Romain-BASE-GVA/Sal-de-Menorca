@@ -16,7 +16,7 @@ $(document).ready(function () {
     singleProduct();
     dropdowns();
     switches();
-    rteImgStyling();
+    rteMediaStyling();
     footerScroll();
 
     // const lenis = new Lenis({
@@ -663,8 +663,12 @@ $(document).ready(function () {
 
     };
 
-    function rteImgStyling(){
+    function rteMediaStyling(){
         $('.article p img').each(function(){
+            $(this).parent('p').addClass('article-p-media');
+        });
+
+        $('.article p iframe').each(function(){
             $(this).parent('p').addClass('article-p-media');
         });
     };
