@@ -137,6 +137,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+    br {
+        display: none;
+    }
+
     img {
         display: block;
         flex: 0 0 calc(50% - 10px);
@@ -190,6 +194,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+    br {
+        display: none;
+    }
+
+
     img {
         display: block;
         flex: 0 0 calc(50% - 10px);
@@ -226,6 +235,10 @@
 }
 
 .article-text p:has(iframe){
+    br {
+        display: none;
+    }
+
     iframe {
         width: 100%;
         aspect-ratio: 1.75/1;
