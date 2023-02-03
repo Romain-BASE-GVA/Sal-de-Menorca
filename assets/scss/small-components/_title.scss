@@ -3,6 +3,10 @@
     flex-direction: column;
     text-align: center;
     text-transform: uppercase;
+
+    .blog-item__infos & {
+        margin-top: 0;
+    }
 }
 
 .title__main {

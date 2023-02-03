@@ -164,7 +164,7 @@
 
 .topbar__nav__text {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex: 0 0 200px;
 
     @media (max-width: $lg){
@@ -179,7 +179,9 @@
         flex: 0 0 90px;
     }
 
-
+    &.product-nav-trigger {
+        justify-content: flex-end;
+    }
 
 }
 

@@ -16,6 +16,7 @@ $(document).ready(function () {
     singleProduct();
     dropdowns();
     switches();
+    rteImgStyling();
     footerScroll();
 
     // const lenis = new Lenis({
@@ -221,7 +222,7 @@ $(document).ready(function () {
 
     function splitTextAnim() {
 
-        $('.block--text p, .article-blockquote p, .next-article__title').each(function () {
+        $('.block--text p, .article-blockquote p, .article blockquote p, .next-article__title').each(function () {
             var split = $(this).splitText({ type: 'words', useLite: true });
             var words = $(this).find('span');
             var parentIndex = $(this).parents('.section').index();
@@ -660,6 +661,12 @@ $(document).ready(function () {
 
         });
 
+    };
+
+    function rteImgStyling(){
+        $('.article p img').each(function(){
+            $(this).parent('p').addClass('article-p-media');
+        });
     };
 
     function footerScroll() {

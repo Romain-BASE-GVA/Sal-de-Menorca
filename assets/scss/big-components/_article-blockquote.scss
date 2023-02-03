@@ -29,3 +29,35 @@
 .article-blockquote span {
     display: inline-block;
 }
+
+.article .article__block:not(.article-blockquote) blockquote {
+    position: relative;
+    left: 50%;
+    font-family: $font-brand;
+    @include fs-xxl-clamp;
+    line-height: 1;
+    margin: 1.5em 0 1.5em -35vw;
+    text-align: center;
+    width: 70vw;
+    padding: 0;
+    line-height: 1;
+
+    p {
+        font-family: inherit;
+        line-height: inherit;
+    }
+
+    span {
+        display: inline-block;
+    }
+
+    @media (max-width: $xl){
+        width: calc(94vw - 80px);
+        margin-left: calc(-47vw + 40px);
+    }
+
+    @media (max-width: $sm){
+        width: calc(100vw - 40px);
+        margin-left: calc(-50vw + 20px);
+    }
+}

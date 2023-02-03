@@ -23,21 +23,6 @@
         color: inherit;
     }
 
-    img {
-        width: 100%;
-        height: auto;
-        border-radius: $radius;
-        overflow: hidden;
-
-        @media (max-width: $md) {
-            border-radius: $radius/2
-        }
-    
-        @media (max-width: $sm){
-            border-radius: $radius/3;
-        }
-    }
-
     @media (max-width: $xxl){
         > div {
             grid-column: 4/10;
