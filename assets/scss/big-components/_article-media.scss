@@ -138,6 +138,7 @@
     flex-wrap: wrap;
 
     img {
+        display: block;
         flex: 0 0 calc(50% - 10px);
         height: auto;
         border-radius: $radius/2;
@@ -146,9 +147,27 @@
         &:only-child {
             flex: 0 0 100%;
         }
-    
+        
+        &:nth-child(n+3){
+            margin-top: $gutter/2;
+        }
+
         @media (max-width: $sm){
             border-radius: $radius/3;
+            flex: 0 0 100%;
+
+            &:not(:only-child){
+                margin-bottom: $gutter/2;
+            }
+
+            &:nth-child(n+3){
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            
         }
     }
 }
