@@ -11,7 +11,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
     
+    <link href="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/base.css?v=30952724773190732241674603466" rel="stylesheet" type="text/css" media="all">
+
     <link rel="stylesheet" href="assets/css/main.min.css">
+
+    <link rel="prefetch" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-ui~app.latest.en.9f2a5e9ec696775e2217.css">
+    <link rel="prefetch" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/vendors~app.latest.en.e788719f193b49c039a3.css">
+    <link rel="prefetch" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.en.6b4c79ead7042980b29d.css">
+    <link rel="prefetch" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information~Payment~ShopPay.latest.en.da9f06164a980bf8e7ea.css">
+    <link rel="prefetch" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information.latest.en.9a0274ab07be120c1902.css">
+
     <script>
         var html = document.querySelector('html');
         html.classList.remove('no-js');
@@ -206,6 +215,13 @@
 
     </div>
     <div class="blur-all"></div>
+    <link href="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/component-cart.css?v=61086454150987525971674464228" rel="stylesheet" type="text/css" media="all">
+<link href="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/component-cart-items.css?v=23917223812499722491674464221" rel="stylesheet" type="text/css" media="all">
+<link href="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/component-totals.css?v=86168756436424464851674464169" rel="stylesheet" type="text/css" media="all">
+<link href="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/component-price.css?v=65402837579211014041674464167" rel="stylesheet" type="text/css" media="all">
+<link href="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/component-discounts.css?v=152760482443307489271674464184" rel="stylesheet" type="text/css" media="all">
+<link href="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/component-loading-overlay.css?v=167310470843593579841674464227" rel="stylesheet" type="text/css" media="all">
+<script src="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/cart.js?v=83971781268232213281674464166" defer="defer"></script>
     <!-- /product-nav -->
 
     <header class="header header--regular header--regular--small" data-topbar-class="topbar--dark">
@@ -214,9 +230,185 @@
 
     <main data-topbar-class="topbar--dark">
         <div class="screen-cart">
-            CART HERE
-            <!-- ICI tout le cart, J'ajoute les styles, .... par apres -->
-        </div>
+    
+            <cart-items class="page-width">
+              <div class="cart__warnings">
+                <a href="/" class="btn btn--dark btn--neg product-nav-trigger"><span>Continue shopping</span></a>
+              </div>
+            
+              <form action="/cart" class="cart__contents critical-hidden" method="post" id="cart">
+                <div class="cart__items" id="main-cart-items" data-id="template--17283758424329__cart-items">
+                  <div class="js-contents"><table class="cart-items">
+                        <caption class="visually-hidden">Your cart</caption>
+                        <thead>
+                          <tr>
+                            <th colspan="2" scope="col">Product</th>
+                            <th class="cart-items__heading--wide" scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                          </tr>
+                        </thead>
+            
+                        <tbody><tr class="cart-item" id="CartItem-1">
+                              <td class="cart-item__media">
+                                
+                                  <a href="/products/flor-de-sal">
+                                    <img src="//cdn.shopify.com/s/files/1/0682/1383/3993/products/product-nav-2.jpg?v=1675178421&amp;width=300" class="cart-item__image" alt="FLOR DE SAL" loading="lazy" width="150" height="91">
+                                  </a>
+                                
+                              </td>
+            
+                              <td class="cart-item__details">
+                                <a href="/products/flor-de-sal">
+                                  <h4>FLOR DE SAL</h4>
+        150 gr
+        <div class="product-option">
+                                      15,00€
+                                    </div></a>
+                              </td>
+            
+                              <td class="cart-item__quantity">
+                                <div class="cart-item__quantity-wrapper">
+                                  <label class="visually-hidden" for="Quantity-1">
+                                    Quantity
+                                  </label>
+                                  <quantity-input class="quantity">
+                                    <button class="quantity__button no-js-hidden" name="minus" type="button">
+                                      <span class="visually-hidden">Decrease quantity for FLOR DE SAL</span>
+                                      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" fill="none" viewBox="0 0 10 2">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M.5 1C.5.7.7.5 1 .5h8a.5.5 0 110 1H1A.5.5 0 01.5 1z" fill="currentColor">
+        </path></svg>
+        
+                                    </button>
+                                    <input class="quantity__input" type="number" name="updates[]" value="1" min="0" aria-label="Quantity for FLOR DE SAL" id="Quantity-1" data-index="1">
+                                    <button class="quantity__button no-js-hidden" name="plus" type="button">
+                                      <span class="visually-hidden">Increase quantity for FLOR DE SAL</span>
+                                      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" fill="none" viewBox="0 0 10 10">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor">
+        </path></svg>
+        
+                                    </button>
+                                  </quantity-input>
+            
+                                  <cart-remove-button id="Remove-1" data-index="1">
+                                    <a href="/cart/change?id=44076118311177:55fd8d6c6e6e979f30d3b1e0d6dcd2fb&amp;quantity=0" class="button button--tertiary" aria-label="Remove FLOR DE SAL - 150g">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false" role="presentation" class="icon icon-remove">
+          <path d="M14 3h-3.53a3.07 3.07 0 00-.6-1.65C9.44.82 8.8.5 8 .5s-1.44.32-1.87.85A3.06 3.06 0 005.53 3H2a.5.5 0 000 1h1.25v10c0 .28.22.5.5.5h8.5a.5.5 0 00.5-.5V4H14a.5.5 0 000-1zM6.91 1.98c.23-.29.58-.48 1.09-.48s.85.19 1.09.48c.2.24.3.6.36 1.02h-2.9c.05-.42.17-.78.36-1.02zm4.84 11.52h-7.5V4h7.5v9.5z" fill="currentColor"></path>
+          <path d="M6.55 5.25a.5.5 0 00-.5.5v6a.5.5 0 001 0v-6a.5.5 0 00-.5-.5zM9.45 5.25a.5.5 0 00-.5.5v6a.5.5 0 001 0v-6a.5.5 0 00-.5-.5z" fill="currentColor"></path>
+        </svg>
+        
+                                    </a>
+                                  </cart-remove-button>
+                                </div>
+                                <div class="cart-item__error" id="Line-item-error-1" role="alert">
+                                  <small class="cart-item__error-text"></small>
+                                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+                                    <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"></circle>
+                                    <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"></circle>
+                                    <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"></path>
+                                    <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                                  </path></svg>
+                                </div>
+                              </td>
+            
+                              <td class="cart-item__totals">
+                                <div class="loading-overlay hidden">
+                                  <div class="loading-overlay__spinner">
+                                    <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                    </svg>
+                                  </div>
+                                </div>
+            
+                                <div class="cart-item__price-wrapper"><span class="price">
+                                      15,00€
+                                    </span></div>
+                              </td>
+                            </tr><tr class="cart-item" id="CartItem-2">
+                              <td class="cart-item__media">
+                                
+                                  <a href="/products/sel">
+                                    <img src="//cdn.shopify.com/s/files/1/0682/1383/3993/products/single-product-1.jpg?v=1674572282&amp;width=300" class="cart-item__image" alt="FLOR DE SAL" loading="lazy" width="150" height="196">
+                                  </a>
+                                
+                              </td>
+            
+                              <td class="cart-item__details">
+                                <a href="/products/sel">
+                                  <h4>FLOR DE SAL</h4>
+        150 gr
+        <div class="product-option">
+                                      15,00€
+                                    </div></a>
+                              </td>
+            
+                              <td class="cart-item__quantity">
+                                <div class="cart-item__quantity-wrapper">
+                                  <label class="visually-hidden" for="Quantity-2">
+                                    Quantity
+                                  </label>
+                                  <quantity-input class="quantity">
+                                    <button class="quantity__button no-js-hidden" name="minus" type="button">
+                                      <span class="visually-hidden">Decrease quantity for FLOR DE SAL</span>
+                                      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" fill="none" viewBox="0 0 10 2">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M.5 1C.5.7.7.5 1 .5h8a.5.5 0 110 1H1A.5.5 0 01.5 1z" fill="currentColor">
+        </path></svg>
+        
+                                    </button>
+                                    <input class="quantity__input" type="number" name="updates[]" value="3" min="0" aria-label="Quantity for FLOR DE SAL" id="Quantity-2" data-index="2">
+                                    <button class="quantity__button no-js-hidden" name="plus" type="button">
+                                      <span class="visually-hidden">Increase quantity for FLOR DE SAL</span>
+                                      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" fill="none" viewBox="0 0 10 10">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor">
+        </path></svg>
+        
+                                    </button>
+                                  </quantity-input>
+            
+                                  <cart-remove-button id="Remove-2" data-index="2">
+                                    <a href="/cart/change?id=44033029636361:7ddb735a0d18e3207240ca5110f97e09&amp;quantity=0" class="button button--tertiary" aria-label="Remove FLOR DE SAL - 150g">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false" role="presentation" class="icon icon-remove">
+          <path d="M14 3h-3.53a3.07 3.07 0 00-.6-1.65C9.44.82 8.8.5 8 .5s-1.44.32-1.87.85A3.06 3.06 0 005.53 3H2a.5.5 0 000 1h1.25v10c0 .28.22.5.5.5h8.5a.5.5 0 00.5-.5V4H14a.5.5 0 000-1zM6.91 1.98c.23-.29.58-.48 1.09-.48s.85.19 1.09.48c.2.24.3.6.36 1.02h-2.9c.05-.42.17-.78.36-1.02zm4.84 11.52h-7.5V4h7.5v9.5z" fill="currentColor"></path>
+          <path d="M6.55 5.25a.5.5 0 00-.5.5v6a.5.5 0 001 0v-6a.5.5 0 00-.5-.5zM9.45 5.25a.5.5 0 00-.5.5v6a.5.5 0 001 0v-6a.5.5 0 00-.5-.5z" fill="currentColor"></path>
+        </svg>
+        
+                                    </a>
+                                  </cart-remove-button>
+                                </div>
+                                <div class="cart-item__error" id="Line-item-error-2" role="alert">
+                                  <small class="cart-item__error-text"></small>
+                                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+                                    <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"></circle>
+                                    <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"></circle>
+                                    <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"></path>
+                                    <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                                  </path></svg>
+                                </div>
+                              </td>
+            
+                              <td class="cart-item__totals">
+                                <div class="loading-overlay hidden">
+                                  <div class="loading-overlay__spinner">
+                                    <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                    </svg>
+                                  </div>
+                                </div>
+            
+                                <div class="cart-item__price-wrapper"><span class="price">
+                                      45,00€
+                                    </span></div>
+                              </td>
+                            </tr></tbody>
+                      </table></div>
+                </div>
+            
+                <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status" aria-hidden="true">New subtotal: €60,00 EUR
+        </p>
+                <p class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status">Loading...</p>
+              </form>
+            </cart-items>
+                                      
+          </div>
     </main>
 
     <!-- FOOTER

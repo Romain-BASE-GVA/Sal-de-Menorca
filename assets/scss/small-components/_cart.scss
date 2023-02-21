@@ -2,9 +2,48 @@
     padding: 0 $gutter $gutter;
 }
 
-.cart-item__name {
-    color: inherit;
-    text-decoration: none;
+.cart__contents {
+    font-family: $font-text;
+}
 
-    @include underlink;
+.cart-item {
+    padding-top: 10px;
+}
+
+.cart-item__details {
+    
+    a {
+        color: inherit;
+        text-decoration: none;
+        @include underlink;
+    }
+
+}
+
+.cart__footer {
+    font-family: $font-text;   
+}
+
+.cart-item__media {
+
+    // padding: 0!important;
+
+    a {
+        position: relative;
+        display: block;
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.cart-item__image {
+
 }

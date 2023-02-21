@@ -10,8 +10,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
-    
+
+    <link href="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/base.css?v=30952724773190732241674603466" rel="stylesheet" type="text/css" media="all">
+
     <link rel="stylesheet" href="assets/css/main.min.css">
+
+    <link rel="prefetch" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-ui~app.latest.en.9f2a5e9ec696775e2217.css">
+    <link rel="prefetch" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/vendors~app.latest.en.e788719f193b49c039a3.css">
+    <link rel="prefetch" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.en.6b4c79ead7042980b29d.css">
+    <link rel="prefetch" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information~Payment~ShopPay.latest.en.da9f06164a980bf8e7ea.css">
+    <link rel="prefetch" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information.latest.en.9a0274ab07be120c1902.css">
+
+
     <script>
         var html = document.querySelector('html');
         html.classList.remove('no-js');
@@ -25,9 +35,26 @@
     -->
     <div class="topbar topbar--light">
         <div class="topbar__lang">
-            En
-            <!-- Tu peux insérer ici le lang switcher, je le styliserai par la suite -->
-        </div>
+            <localization-form><form method="post" action="/localization" id="topbar__lang--form" accept-charset="UTF-8" class="shopify-localization-form" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="return_to" value="/products/sel"><button type="button" aria-expanded="false" aria-controls="topbar__lang--list">
+                  EN
+                </button>
+                <div class="topbar__lang--list-wrapper">
+                  <ul id="topbar__lang--list" role="list"><li>
+                        <a class="topbar__lang--link topbar__lang--link--active" href="#" hreflang="en" aria-current="true" data-value="en" lang="en">
+                          EN
+                        </a>
+                      </li><li>
+                        <a class="topbar__lang--link" href="#" hreflang="es" data-value="es" lang="es">
+                          ES
+                        </a>
+                      </li><li>
+                        <a class="topbar__lang--link" href="#" hreflang="fr" data-value="fr" lang="fr">
+                          FR
+                        </a>
+                      </li></ul>
+                </div>
+                <input type="hidden" name="locale_code" value="en"></form></localization-form>
+          </div>
         <div class="topbar__nav">
             <a href="#" class="topbar__nav__text product-nav-trigger">Shop</a>
             <a href="home.html" class="topbar__a">
@@ -60,6 +87,7 @@
         <div class="topbar__cart">
             <span class="topbar__cart__desktop">Your cart</span>
             <span class="topbar__cart__mobile">CA</span>
+            <div id="cart-icon-bubble"><span class="topbar__cart__count" aria-hidden="true">1</span></div>
             <!-- Tu peux insérer ici le module CART, je le styliserai par la suite -->
         </div>
     </div>
@@ -344,11 +372,85 @@
                         </div>
                     </div>
                     <div class="single-product__cta single-product__cta--active" data-cta-variant="1">
-                        VARIANT 1 - 150gr - Quantity and add to card
+                        <link href="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/section-main-product.css?v=47066373402512928901674464148" rel="stylesheet" type="text/css" media="all">
+                        <link href="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/component-loading-overlay.css?v=167310470843593579841674464227" rel="stylesheet" type="text/css" media="all">
+                        <product-form class="product-form">
+                            <div class="product-form__error-message-wrapper" role="alert" hidden="">
+                              <svg aria-hidden="true" focusable="false" class="icon icon-error" viewBox="0 0 13 13">
+                                <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"></circle>
+                                <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"></circle>
+                                <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"></path>
+                                <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                              </path></svg>
+                              <span class="product-form__error-message"></span>
+                            </div><form method="post" action="/cart/add" id="product-form-template--17283758620937__main-1" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="id" value="44033029636361" class="product-variant-id"><quantity-input class="quantity">
+                                  <button class="quantity__button no-js-hidden" name="minus" type="button">
+                                    <span class="visually-hidden">Decrease quantity for FLOR DE SAL</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" fill="none" viewBox="0 0 10 2">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M.5 1C.5.7.7.5 1 .5h8a.5.5 0 110 1H1A.5.5 0 01.5 1z" fill="currentColor">
+                        </path></svg>
+                        
+                                  </button>
+                                  <input class="quantity__input" type="number" name="quantity" id="Quantity-template--17283758620937__main" data-cart-quantity="0" data-min="1" min="1" step="1" value="1" form="product-form-template--17283758620937__main-1">
+                                  <button class="quantity__button no-js-hidden" name="plus" type="button">
+                                    <span class="visually-hidden">Increase quantity for FLOR DE SAL</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" fill="none" viewBox="0 0 10 10">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor">
+                        </path></svg>
+                        
+                                  </button>
+                                </quantity-input>
+                                
+                                <script src="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/product-info.js?v=24712365410993305041675957656" defer="defer"></script><button type="submit" name="add" class="btn btn--dark btn--neg">
+                                <span>15€ - Add to cart
+                        </span>
+                                <div class="loading-overlay__spinner hidden">
+                                  <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                  </svg>
+                                </div>
+                              </button></form></product-form>
                         <!-- Tu peux insérer ici le module quantité et ajouter au cart, je le styliserai par la suite  -->
                     </div>
                     <div class="single-product__cta" data-cta-variant="2">
-                        VARIANT 2 - 400gr - Quantity and add to card
+                        <link href="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/section-main-product.css?v=47066373402512928901674464148" rel="stylesheet" type="text/css" media="all">
+                        <link href="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/component-loading-overlay.css?v=167310470843593579841674464227" rel="stylesheet" type="text/css" media="all">
+                        <product-form class="product-form">
+                            <div class="product-form__error-message-wrapper" role="alert" hidden="">
+                              <svg aria-hidden="true" focusable="false" class="icon icon-error" viewBox="0 0 13 13">
+                                <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"></circle>
+                                <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"></circle>
+                                <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"></path>
+                                <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                              </path></svg>
+                              <span class="product-form__error-message"></span>
+                            </div><form method="post" action="/cart/add" id="product-form-template--17283758620937__main-2" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="id" value="44033029669129" class="product-variant-id"><quantity-input class="quantity">
+                                  <button class="quantity__button no-js-hidden" name="minus" type="button">
+                                    <span class="visually-hidden">Decrease quantity for FLOR DE SAL</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" fill="none" viewBox="0 0 10 2">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M.5 1C.5.7.7.5 1 .5h8a.5.5 0 110 1H1A.5.5 0 01.5 1z" fill="currentColor">
+                        </path></svg>
+                        
+                                  </button>
+                                  <input class="quantity__input" type="number" name="quantity" id="Quantity-template--17283758620937__main" data-cart-quantity="0" data-min="1" min="1" step="1" value="1" form="product-form-template--17283758620937__main-2">
+                                  <button class="quantity__button no-js-hidden" name="plus" type="button">
+                                    <span class="visually-hidden">Increase quantity for FLOR DE SAL</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" fill="none" viewBox="0 0 10 10">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor">
+                        </path></svg>
+                        
+                                  </button>
+                                </quantity-input>
+                                
+                                <script src="//cdn.shopify.com/s/files/1/0682/1383/3993/t/1/assets/product-info.js?v=24712365410993305041675957656" defer="defer"></script><button type="submit" name="add" class="btn btn--dark btn--neg">
+                                <span>50€ - Add to cart
+                        </span>
+                                <div class="loading-overlay__spinner hidden">
+                                  <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                  </svg>
+                                </div>
+                              </button></form></product-form>
                         <!-- Tu peux insérer ici le module quantité et ajouter au cart, je le styliserai par la suite  -->
                     </div>
                 </div>

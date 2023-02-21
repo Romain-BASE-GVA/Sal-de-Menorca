@@ -212,12 +212,12 @@
 }
 
 .single-product__details {
-    width: 50%;
+    width: 75%;
     margin-top: $gutter*3;
 
-    @media (max-width: $xl){
-        width: 75%;
-    }
+    // @media (max-width: $xl){
+    //     width: 75%;
+    // }
 
     @media (max-width: $lg){
         // width: 90%;
@@ -236,9 +236,17 @@
 
 .single-product__receipe-details {
     width: 75%;
+    @include fs-lg;
+    font-family: $font-text;
+
+    @media (max-width: $lg){
+        flex-direction: column;
+        @include fs-md;
+    }
 
     @media (max-width: $md){
-        width: 90%;
+         @include fs-sm;
+         width: 90%;
     }
 
     @media (max-width: $sm){
@@ -275,9 +283,10 @@
 
 .single-product__cta {
     display: none;
-    background-color: $white;
-    padding: $gutter/2;
-    border: 1px solid $primary;
+    width: 100%;
+    // background-color: $white;
+    // padding: $gutter/2;
+    // border: 1px solid $primary;
 
     &--active {
         display: block;
@@ -313,5 +322,38 @@
 
     img {
         @include object-cover;
+    }
+}
+
+.single-product__cta .product-form {
+    .form {
+        display: flex;
+    }
+
+    .quantity {
+        width: 100px;
+        margin-right: $gutter/4;
+        padding: $gutter/4;
+        border: 1px solid $primary;
+        background-color: $white;
+        font-family: $font-text;
+        @include fs-md;
+
+        &:after {
+            box-shadow: unset;
+        }
+    }
+
+    .quantity__input {
+        font-size: inherit;
+    }
+
+    [type="submit"] {
+        flex-grow: 1;
+        background-color: $white;
+    }
+
+    .quantity__button {
+        flex-shrink: unset;
     }
 }
