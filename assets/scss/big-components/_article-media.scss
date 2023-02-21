@@ -79,6 +79,11 @@
     &--screen {
         width: 100%;
         height: calc(100vh - $gutter*2);
+
+        @media (orientation: portrait) {
+            height: unset;
+            aspect-ratio: 36/24;
+        }
     }
 
     img {

@@ -56,11 +56,11 @@
 }
 
 .topbar--product-open {
-    // .topbar__nav {
-    //     color: $white;
-    // }
-    background: $white;
-    color: $primary;
+    .topbar__nav {
+        color: $white;
+    }
+    // background: $white;
+    // color: $primary;
 }
 
 .topbar__sigle {
@@ -169,12 +169,14 @@
 }
 
 .topbar__nav {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1 1 100%;
     @include fs-xl;
     transition: color 0.3s ease-in-out;
+    z-index: 10;
 
     // .topbar--product-open & {
     //     color: $white;

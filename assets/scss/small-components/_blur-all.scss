@@ -12,7 +12,7 @@
     transition: all .5s ease-out;
     z-index: 14;
 
-    .product-nav--is-open+& {
+    .topbar--product-open+& {
         opacity: 1;
         visibility: visible;
         backdrop-filter: blur(10px);
