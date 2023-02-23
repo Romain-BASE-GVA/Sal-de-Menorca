@@ -21,10 +21,15 @@
 
 	&--small {
 		height: calc(60vh);
+		padding-top: 180px;
 	}
 
 	@media (max-width: $md){
         padding: 0 $gutter/2;
+
+		&--small {
+			padding: 95px $gutter/2 0;
+		}
     }
 }
 
