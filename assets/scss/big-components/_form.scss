@@ -1,0 +1,87 @@
+.field::before, 
+.select::before, 
+.customer .field::before, 
+.customer select::before, 
+.localization-form__select::before {
+    box-shadow: unset;
+}
+
+.contact__fields,
+.field {
+    margin-bottom: $gutter/4;
+    font-family: $font-text;
+}
+
+label {
+    font-family: $font-text;
+}
+
+.field__input,
+.customer .field input {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba($primary, .25);
+
+  &:focus {
+    border-bottom: 1px solid rgba($primary, 1);
+  }
+}
+
+.field__label, 
+.customer .field label {
+    left: 0;
+}
+
+.field::after, 
+.select::after, 
+.customer .field::after, 
+.customer select::after, 
+.localization-form__select::after {
+    display: none;
+}
+
+.field__input:focus,
+.customer .field input:focus {
+    box-shadow: unset;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.field__input:focus ~ .field__label, 
+.field__input:not(:placeholder-shown) ~ .field__label, 
+.field__input:autofill ~ .field__label, 
+.customer .field input:focus ~ label, 
+.customer .field input:not(:placeholder-shown) ~ label, 
+.customer .field input:autofill ~ label {
+    left: 0;
+}
+
+.field__input:focus, 
+.field__input:not(:placeholder-shown), 
+.field__input:autofill, 
+.customer .field input:focus, 
+.customer .field input:not(:placeholder-shown), 
+.customer .field input:autofill {
+    padding-left: 0;
+}
+
+.form-status.form-status {
+    font-family: $font-text;
+}
+
+.article-text .form-status-list {
+    padding: 0;
+}
+
+
+.select__select,
+.customer select, 
+select {
+    border: 1px solid rgba($primary, .25);
+    font-family: $font-text;
+
+    &:focus {
+      border: 1px solid rgba($primary, 1);
+    //   padding-left: 0;
+      box-shadow: unset;
+    }
+}

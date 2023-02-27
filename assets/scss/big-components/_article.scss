@@ -31,7 +31,7 @@
     }
 
     @media (max-width: $md){
-        padding: 0 $gutter/2 $gutter/2;
+        padding: 0 $gutter/2 $gutter*2;
     }
 }
 

@@ -1,0 +1,24 @@
+.shopify-challenge__container {
+    margin-top: 0;
+}
+
+.shopify-challenge__message {
+    @extend .header;
+    @extend .header--regular;
+    @extend .header--regular--small;
+}
+
+.shopify-challenge__button {
+    @extend .btn--light;
+    border: 1px solid $primary;
+    @include transition;
+
+    &:hover {
+        background-color: $primary;
+    }
+    
+}
+
+.shopify-challenge__button {
+    margin-top: $gutter/2!important;
+}

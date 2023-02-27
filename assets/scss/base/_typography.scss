@@ -35,6 +35,7 @@ body {
     font-family: $font-brand;
     font-size: 2rem;
     line-height: 1.34;
+    letter-spacing: unset;
     background-color: $white;
     color: $primary;
     -webkit-font-smoothing: antialiased;
@@ -46,6 +47,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin: 0;
     line-height: 1;
+}
+
+.customer h2 {
+    margin-top: 2em;
 }
 
 p {

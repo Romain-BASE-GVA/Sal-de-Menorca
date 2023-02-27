@@ -1,18 +1,18 @@
 .next-article {
     display: block;
-    margin-top: $gutter*4;
+    // margin-top: $gutter*4;
     padding: 0 $gutter 0;
     width: 100%;
     text-decoration: none;
     color: inherit;
 
     @media (max-width: $xl) {
-        margin-top: $gutter*3;
+        // margin-top: $gutter*3;
     }
 
     @media (max-width: $md) {
         padding: 0 $gutter/2 0;
-        margin-top: $gutter*2;
+        // margin-top: $gutter*2;
     }
 }
 

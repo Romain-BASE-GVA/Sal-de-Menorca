@@ -142,20 +142,24 @@
     cursor: pointer;
     border: none;
     overflow: hidden;
-    transition: color .4s ease-in-out;
+    transition: color .4s ease-in-out!important;
 
     &:before {
         content: "";
         position: absolute;
-        display: block;
-        top: 100%;
-        left: -20px;
+        display: block!important;
+        top: 100%!important;
+        left: -20px!important;
+        right: unset!important;
+        bottom: unset!important;
         width: calc(100% + 40px);
         height: calc(100% + 40px);
         opacity: 0;
         transform: translate3d(0, 0, 0);
         filter: blur(20px);
+        box-shadow: unset!important;
         transition: all .4s ease-in-out;
+        z-index: unset!important;
     }
 
     &:hover {

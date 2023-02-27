@@ -41,7 +41,7 @@ $(document).ready(function () {
 
     function productNav() {
 
-        $('.product-nav-trigger').on('click', function (e) {
+        $('.product-nav-trigger, [href="#shop"]').on('click', function (e) {
             e.preventDefault();
 
             if (!productNavIsOpen) {
@@ -446,7 +446,9 @@ $(document).ready(function () {
     function articlePage() {
 
         var articleIntro = gsap.timeline({ paused: true, delay: .5 });
-        var articleTitleSplit = $('.header__title, .screen-404 h1').splitText({ type: 'words', useLite: true });
+        var articleTitleSplit = $('.header__title, .screen-404 h1').each(function(){
+            $(this).splitText({ type: 'words', useLite: true });
+        });
         var words = articleTitleSplit.find('span');
 
         articleIntro
