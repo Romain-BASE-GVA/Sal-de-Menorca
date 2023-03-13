@@ -1,9 +1,10 @@
 .block--text {
     grid-column: 3 / 11;
     @include fs-xxl-clamp;
-    line-height: 1;
+    line-height: 1.03;
     text-align: center;
     padding: 4em 0 calc(4em + $gutter*2) 0;
+    font-variant-alternates: styleset(jeu3);
 
     &:only-child {
         padding: 4em 0;

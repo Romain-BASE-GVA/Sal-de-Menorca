@@ -3,6 +3,8 @@
     flex-direction: column;
     text-align: center;
     text-transform: uppercase;
+    font-variant-alternates: styleset(jeu3);
+    line-height: 1.03;
 
     .blog-item__infos & {
         margin-top: 0;
@@ -11,10 +13,15 @@
     .multiple & {
         margin-top: 0;
     }
+
+    .other-products__infos & {
+        margin-top: 0;
+    }
 }
 
 .title__main {
     @include fs-xl-clamp;
+    line-height: 1.03;
 
     @media (max-width: $md){
         @include fs-lg;
@@ -24,6 +31,11 @@
 .title__sub {
     font-family: $font-text;
     @include fs-md;
+    
+
+    .title__main + & {
+        margin-top: .5em;
+    }
 
     @media (max-width: $md){
         @include fs-sm;

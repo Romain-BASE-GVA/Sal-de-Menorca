@@ -2,7 +2,7 @@
 	display: flex;
 	width: 100%;
 	height: 100vh;
-	height: calc(100vh - 110px);
+	// height: calc(100vh - 110px);
 
 	@media (orientation: portrait){
 		flex-direction: column;
@@ -120,12 +120,12 @@
 .multiple__back {
 	position: absolute;
 	display: block;
-	// top: $gutter;
-	top: 0;
+	top: $gutter;
+	// top: 0;
 	left: $gutter;
 	width: calc(100% - $gutter * 2);
-	// height: calc(100% - $gutter * 2);
-	height: calc(100% - $gutter);
+	height: calc(100% - $gutter * 2);
+	// height: calc(100% - $gutter);
 
 	@media (max-width: $md){
 		top: $gutter / 2;
@@ -140,7 +140,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	padding: $gutter*2 $gutter $gutter;
+	padding: $gutter;
 	z-index: 20;
 
 	@media (orientation: portrait){

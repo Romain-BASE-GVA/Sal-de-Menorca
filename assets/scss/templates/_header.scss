@@ -36,7 +36,7 @@
 .header__title {
 	width: 85%;
 	@include fs-biggest-clamp;
-	line-height: 1;
+	line-height: 1.03;
 	text-align: center;
 	text-transform: uppercase;
 	opacity: 0;

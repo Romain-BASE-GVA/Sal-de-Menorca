@@ -46,7 +46,7 @@ $(document).ready(function () {
 
             if (!productNavIsOpen) {
                 $('.product-nav').addClass('product-nav--is-open');
-                $('.topbar').addClass('topbar--product-open');
+                $('.topbar').addClass('topbar--product-open').removeClass('topbar--is-hidden');
 
                 productNavIsOpen = true;
             } else {
@@ -236,8 +236,29 @@ $(document).ready(function () {
                 },
                 onLeaveBack: (e) => {
                     $('.topbar').removeClass('topbar--is-scrolled');
+                },
+
+            });
+
+            ScrollTrigger.create({
+                trigger: $('body'),
+                start: 'top top',
+                end: 'bottom bottom',
+                invalidateOnRefresh: true,
+                refreshPriority: -1000,
+                onUpdate: (self) => {
+                    if(self.direction === -1){ // scrolling Up
+                        $('.topbar').removeClass('topbar--is-hidden');
+                    } else { // scrolling Down
+                        if(!productNavIsOpen){
+                            $('.topbar').addClass('topbar--is-hidden');
+
+                            console.log('Product is not open');
+                        }
+                    }
                 }
             });
+
 
         } else {
             console.log('IS NOT HOME');
@@ -254,6 +275,28 @@ $(document).ready(function () {
                 },
                 onLeaveBack: (e) => {
                     $('.topbar').removeClass('topbar--is-scrolled');
+                }
+            });
+
+            ScrollTrigger.create({
+                trigger: $('body'),
+                start: 'top top',
+                end: 'bottom bottom',
+                invalidateOnRefresh: true,
+                refreshPriority: -1000,
+                onUpdate: (self) => {
+                    // self.direction === -1 ? $('.topbar').removeClass('topbar--is-hidden') : $('.topbar').addClass('topbar--is-hidden')
+
+                    if(self.direction === -1){ // scrolling Up
+                        $('.topbar').removeClass('topbar--is-hidden');
+                    } else { // scrolling Down
+                        if(!productNavIsOpen){
+                            $('.topbar').addClass('topbar--is-hidden');
+
+                            console.log('Product is not open');
+                        }
+                    }
+
                 }
             });
         }

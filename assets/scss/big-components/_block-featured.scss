@@ -5,7 +5,8 @@
 
 	.title {
 		position: absolute;
-		top: 190px;
+		// top: 190px;
+		top: $gutter/2;
 		left: 0;
 		width: 100%;
 		z-index: 10;
@@ -54,7 +55,7 @@
 }
 
 .featured__bar--top {
-	height: 135px;
+	// height: 135px;
 	top: 0;
 	transform-origin: top center;
 }

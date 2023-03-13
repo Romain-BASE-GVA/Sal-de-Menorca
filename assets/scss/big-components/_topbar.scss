@@ -10,7 +10,7 @@
     // background-color: $white;
     color: $white;
     text-transform: uppercase;
-    transition: color 0.3s ease-in-out, padding 0.3s ease-in-out, background 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, padding 0.3s ease-in-out, background 0.3s ease-in-out, transform 0.3s ease-in-out;
     z-index: 20;
 
     a {
@@ -53,19 +53,30 @@
     // padding: 1.5rem 4rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+
+    &.topbar--is-hidden {
+        transform: translate3d(0, -100%, 0);
+    }
 }
 
 .topbar--product-open {
     .topbar__nav {
         color: $white;
     }
+
+    // &.topbar--is-hidden {
+    //     transform: translate3d(0, 0, 0);
+    // }
     // background: $white;
     // color: $primary;
 }
 
+
+
 .topbar__sigle {
     width: 2em;
     height: 2em;
+    height: 1.3em;
     margin: 0 1em;
 
     path {

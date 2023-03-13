@@ -76,7 +76,7 @@
 
 
 
-	@media (max-width: $xl){
+	@media (max-width: $xxl){
 		br {
 			display: none;
 		}
@@ -116,7 +116,7 @@
 	font-family: $font-text;
 	@include fs-sm;
 
-	@media (max-width: $lg){
+	@media (max-width: $xl){
         @include fs-smallest;
     }
 
@@ -149,6 +149,8 @@
 	align-items: center;
 	margin-top: 1em;
 	margin-bottom: 1em;
+	font-variant-alternates: styleset(jeu3);
+	line-height: 1.03em;
 
 	@media (max-width: $lg){
 		margin-top: 2em;

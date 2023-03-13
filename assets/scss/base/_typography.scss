@@ -22,6 +22,17 @@
     font-display: swap;
 }
 
+@font-feature-values 'Salinas' {
+    @swash {
+      fancy: 1;
+    }
+
+    @styleset {
+        jeu1: 1;
+        jeu2: 2;
+        jeu3: 3;
+    }
+}
 
 * {
     box-sizing: border-box;
